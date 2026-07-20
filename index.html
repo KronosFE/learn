@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learn — Knowledge Base · Kronos Fusion Energy</title>
+<meta name="description" content="Open knowledge base on compact, low-neutron fusion: physics, engineering, economics, and the open questions behind Kronos MetroVolt and AEGIS.">
+<link rel="canonical" href="https://kronosfusionenergy.com/learn/">
+<meta property="og:title" content="Learn — Knowledge Base">
+<meta property="og:description" content="Open knowledge base on compact, low-neutron fusion: physics, engineering, economics, and the open questions behind Kronos MetroVolt and AEGIS.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Kronos Fusion Energy — Learn", "url": "https://kronosfusionenergy.com/learn/", "description": "Open knowledge base on compact low-neutron fusion."}</script>
+<style>
+:root{
+ --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
+ --line:rgba(231,235,242,.11); --line2:rgba(231,235,242,.20);
+ --serif:"Newsreader",Charter,"Times New Roman",Georgia,serif;
+ --sans:"Space Grotesk",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+ --mono:"Space Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+font:16.5px/1.72 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--gold);text-decoration:none}
+p a,li a{border-bottom:1px solid rgba(212,173,92,.32)}
+a:hover{color:var(--gold-soft)}p a:hover,li a:hover{border-bottom-color:var(--gold-soft)}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text);font-size:13px}
+.brand span{color:var(--gold);margin:0 2px}
+nav.top a{font-family:var(--mono);color:var(--mut);margin-left:20px;font-size:12.5px}
+nav.top a:hover{color:var(--gold)}
+.crumb{font-family:var(--mono);color:var(--mut);font-size:12px;letter-spacing:.03em;margin:34px 0 20px}
+.kicker{font-family:var(--mono);color:var(--gold);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.05rem,4.4vw,2.7rem);line-height:1.1;
+letter-spacing:-.016em;margin:.5rem 0 0;text-wrap:balance}
+h2{font-family:var(--serif);font-weight:500;font-size:1.5rem;line-height:1.2;letter-spacing:-.01em;margin:2.5rem 0 .7rem}
+.lede{font-family:var(--serif);font-style:italic;font-size:1.32rem;line-height:1.5;color:#C4CEDC;margin:1.1rem 0 0;text-wrap:pretty}
+p{margin:0 0 1.05rem}
+ul,ol{padding-left:1.15rem}li{margin:.35rem 0}
+strong,b{font-weight:600}
+.kf{margin:1.9rem 0;border-top:1px solid var(--line)}
+.kf .row{display:grid;grid-template-columns:minmax(115px,30%) 1fr;gap:18px;padding:11px 0;border-bottom:1px solid var(--line)}
+.kf dt{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:2px 0 0}
+.kf dd{margin:0;font-size:15px;color:var(--text)}
+.facts{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:14.5px}
+.facts th,.facts td{padding:10px 16px 10px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.facts th{color:var(--gold);font-weight:500;width:38%}
+.gap{margin:1.8rem 0;padding:1px 0 1px 20px;border-left:2px solid var(--gold);color:#C4CEDC;font-size:15px}
+.gap b{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.16em;
+text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.qa{padding:18px 0;border-top:1px solid var(--line)}
+.qa .q{font-family:var(--serif);font-size:1.16rem;line-height:1.35;color:var(--text);margin-bottom:7px}
+.qa .a{color:#C4CEDC}
+.related{margin:3rem 0 0;padding-top:1.5rem;border-top:1px solid var(--line2)}
+.related h3{font-family:var(--mono);margin:0 0 .3rem;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.related a{display:block;padding:9px 0;color:var(--text);border-bottom:1px solid var(--line)}
+.related a:hover{color:var(--gold)}
+footer{border-top:1px solid var(--line);margin-top:4rem}
+footer .wrap{padding:26px 24px 40px;color:var(--mut);font-size:12.5px;line-height:1.7}
+.lede+.kf{margin-top:2.1rem}
+.hubgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:1px;
+background:var(--line);border:1px solid var(--line);margin:1.1rem 0 2.4rem}
+.card{background:var(--bg);padding:15px 17px}
+.card .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);opacity:.9}
+.card a{display:block;color:var(--text);margin-top:6px;font-size:14.5px;line-height:1.35}
+.card a:hover{color:var(--gold)}
+.seccount{color:var(--mut);font-size:12.5px;font-family:var(--mono);font-weight:400}
+.video{margin:2rem 0}
+.video .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.vframe{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid var(--line)}
+.vframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin:1.6rem 0 2.6rem}
+.vcard{display:block}
+.vthumb{position:relative;aspect-ratio:16/9;border:1px solid var(--line);overflow:hidden;background:#0e1622}
+.vthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vplay i{width:54px;height:54px;border-radius:50%;background:rgba(20,27,36,.62);border:1px solid var(--gold);
+color:var(--gold);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:17px;padding-left:3px}
+.vcard:hover .vplay i{background:var(--gold);color:#1a222c}
+.vmeta{margin-top:11px}
+.vmeta .vn{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--gold)}
+.vmeta .vt{font-family:var(--serif);font-size:1.04rem;line-height:1.28;color:var(--text);margin-top:3px}
+.vcard:hover .vt{color:var(--gold)}
+.watchbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 2rem;
+padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.watchbar .wl{font-family:var(--serif);font-style:italic;color:#C4CEDC;font-size:1.05rem}
+.watchbar a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;white-space:nowrap}
+@media(max-width:560px){.wrap{padding:0 18px}.kf .row{grid-template-columns:1fr;gap:2px}nav.top a:nth-child(n+4){display:none}}
+</style>
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+</div></header>
+<main class="wrap">
+<div class="kicker">Knowledge base · pilot</div>
+<h1>Learn</h1>
+<p class="lede">An open knowledge base on compact, low-neutron fusion — the physics, the engineering, the economics, and the open questions behind Kronos MetroVolt and AEGIS. Every number is the published design point, backed by an open 81-simulation record (<a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a>).</p>
+<div class="watchbar"><span class="wl">Prefer to watch? Eleven short films explain the design.</span><a href="./videos.html">Watch &rarr;</a></div>
+<h2>Concept encyclopedia <span class="seccount">· 120</span></h2>
+<div class="hubgrid">
+<div class="card"><div class="k">Concept</div><a href="./negative-triangularity.html">Negative Triangularity</a></div>
+<div class="card"><div class="k">Concept</div><a href="./bootstrap-fraction.html">Bootstrap Fraction</a></div>
+<div class="card"><div class="k">Concept</div><a href="./greenwald-limit.html">The Greenwald Density Limit</a></div>
+<div class="card"><div class="k">Concept</div><a href="./rebco-hts-magnets.html">REBCO High-Temperature Superconducting Magnets</a></div>
+<div class="card"><div class="k">Concept</div><a href="./direct-energy-conversion.html">Direct Energy Conversion (DEC)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./lawson-criterion.html">The Lawson Criterion &amp; Triple Product</a></div>
+<div class="card"><div class="k">Concept</div><a href="./safety-factor-q95.html">Safety Factor (q₉₅)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./hot-ion-mode.html">Hot-Ion Mode</a></div>
+<div class="card"><div class="k">Concept</div><a href="./tokamak.html">Tokamak</a></div>
+<div class="card"><div class="k">Concept</div><a href="./deuterium.html">Deuterium</a></div>
+<div class="card"><div class="k">Concept</div><a href="./helium-3.html">Helium-3</a></div>
+<div class="card"><div class="k">Concept</div><a href="./tritium.html">Tritium</a></div>
+<div class="card"><div class="k">Concept</div><a href="./bremsstrahlung.html">Bremsstrahlung Radiation</a></div>
+<div class="card"><div class="k">Concept</div><a href="./synchrotron-radiation.html">Synchrotron Radiation</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-beta.html">Plasma Beta (β)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./elongation.html">Elongation (κ)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-divertor.html">The Divertor</a></div>
+<div class="card"><div class="k">Concept</div><a href="./edge-localized-modes.html">Edge-Localized Modes (ELMs)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./h-mode-and-l-mode.html">H-mode and L-mode</a></div>
+<div class="card"><div class="k">Concept</div><a href="./aspect-ratio.html">Aspect Ratio</a></div>
+<div class="card"><div class="k">Concept</div><a href="./energy-confinement-time.html">Energy Confinement Time (τ_E)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./magnetic-confinement.html">Magnetic Confinement</a></div>
+<div class="card"><div class="k">Concept</div><a href="./stellarator.html">Stellarator</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-disruption.html">Plasma Disruption</a></div>
+<div class="card"><div class="k">Concept</div><a href="./resistive-wall-mode.html">Resistive Wall Mode (RWM)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./troyon-limit.html">The Troyon Beta Limit</a></div>
+<div class="card"><div class="k">Concept</div><a href="./scrape-off-layer.html">Scrape-Off Layer (SOL)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-facing-components.html">Plasma-Facing Components (PFCs)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./hafnium-carbide-wall.html">Hafnium Carbide First Wall</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fast-ion-channeling.html">Fast-Ion Channeling (P6)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./neutron-activation.html">Neutron Activation</a></div>
+<div class="card"><div class="k">Concept</div><a href="./levelized-cost-of-electricity.html">Levelized Cost of Electricity (LCOE)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./wrights-law.html">Wright's Law</a></div>
+<div class="card"><div class="k">Concept</div><a href="./current-drive.html">Current Drive &amp; Non-Inductive Operation</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-current.html">Plasma Current (I_p)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-heating.html">Plasma Heating</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fusion-gain-q.html">Fusion Gain (Q)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./engineering-gain.html">Engineering Gain (Q_eng)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./ignition-vs-driven.html">Ignition vs Driven Operation</a></div>
+<div class="card"><div class="k">Concept</div><a href="./proton-boron-11.html">Proton–Boron-11 (p–¹¹B) Fusion</a></div>
+<div class="card"><div class="k">Concept</div><a href="./catalyzed-d-d.html">Catalyzed D–D Fuel Cycle</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fusion-power-density.html">Fusion Power Density</a></div>
+<div class="card"><div class="k">Concept</div><a href="./flux-surfaces.html">Flux Surfaces &amp; the Separatrix</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fusion-neutronics.html">Fusion Neutronics</a></div>
+<div class="card"><div class="k">Concept</div><a href="./no-breeding-blanket.html">Why Kronos Needs No Breeding Blanket</a></div>
+<div class="card"><div class="k">Concept</div><a href="./high-temperature-superconductivity.html">High-Temperature Superconductivity</a></div>
+<div class="card"><div class="k">Concept</div><a href="./magnet-quench.html">Magnet Quench &amp; Protection</a></div>
+<div class="card"><div class="k">Concept</div><a href="./cryogenics.html">Cryogenics &amp; Magnet Cooling</a></div>
+<div class="card"><div class="k">Concept</div><a href="./capacity-factor.html">Capacity Factor</a></div>
+<div class="card"><div class="k">Concept</div><a href="./grid-firming.html">Grid Firming &amp; Dispatchable Power</a></div>
+<div class="card"><div class="k">Concept</div><a href="./gyrokinetic-turbulence.html">Gyrokinetic Turbulence</a></div>
+<div class="card"><div class="k">Concept</div><a href="./itg-turbulence.html">Ion-Temperature-Gradient (ITG) Turbulence</a></div>
+<div class="card"><div class="k">Concept</div><a href="./alfven-eigenmodes.html">Alfvén Eigenmodes (TAEs)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./kink-instability.html">The Kink Instability</a></div>
+<div class="card"><div class="k">Concept</div><a href="./ballooning-mercier.html">Ballooning &amp; Mercier Stability</a></div>
+<div class="card"><div class="k">Concept</div><a href="./vertical-displacement-event.html">Vertical Displacement Event (VDE)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./runaway-electrons.html">Runaway Electrons</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-plasma-pedestal.html">The Plasma Pedestal</a></div>
+<div class="card"><div class="k">Concept</div><a href="./neoclassical-transport.html">Neoclassical Transport</a></div>
+<div class="card"><div class="k">Concept</div><a href="./gyroradius.html">Gyroradius &amp; ρ*</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fusion-cross-section.html">Fusion Cross-Section &amp; Reactivity</a></div>
+<div class="card"><div class="k">Concept</div><a href="./toroidal-field-coils.html">Toroidal Field Coils</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-center-stack.html">The Center Stack</a></div>
+<div class="card"><div class="k">Concept</div><a href="./demountable-magnets.html">Demountable Magnets</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-neutron-shield.html">The Neutron Shield</a></div>
+<div class="card"><div class="k">Concept</div><a href="./charged-particle-direct-converter.html">Charged-Particle Direct Converter (CPDC)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./mhd-generator.html">Plasma-Exhaust MHD Generator</a></div>
+<div class="card"><div class="k">Concept</div><a href="./thermionic-conversion.html">Thermionic Energy Conversion</a></div>
+<div class="card"><div class="k">Concept</div><a href="./photonic-energy-capture.html">Photonic Energy Capture</a></div>
+<div class="card"><div class="k">Concept</div><a href="./carnot-limit.html">The Carnot Limit</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-main-fusion-reactions.html">The Main Fusion Reactions</a></div>
+<div class="card"><div class="k">Concept</div><a href="./helium-ash.html">Helium Ash &amp; Exhaust</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fuel-staging.html">The Staged Fuel Cycle</a></div>
+<div class="card"><div class="k">Concept</div><a href="./direct-internal-recovery.html">Direct Internal Recovery (DIR)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./vacuum-vessel.html">The Vacuum Vessel</a></div>
+<div class="card"><div class="k">Concept</div><a href="./balance-of-plant.html">Balance of Plant</a></div>
+<div class="card"><div class="k">Concept</div><a href="./super-x-divertor.html">The Super-X Divertor</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-diagnostics.html">Plasma Diagnostics</a></div>
+<div class="card"><div class="k">Concept</div><a href="./central-solenoid.html">The Central Solenoid</a></div>
+<div class="card"><div class="k">Concept</div><a href="./poloidal-field-coils.html">Poloidal Field &amp; Shaping Coils</a></div>
+<div class="card"><div class="k">Concept</div><a href="./smart-architecture.html">The S.M.A.R.T. Architecture</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-gate-program.html">The Gate Program (G1–G3)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-falsifiable-seven.html">The Falsifiable Seven</a></div>
+<div class="card"><div class="k">Concept</div><a href="./metrovolt.html">MetroVolt — The Commercial Generator</a></div>
+<div class="card"><div class="k">Concept</div><a href="./aegis.html">AEGIS — The Defense Generator</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-digital-twin.html">The Digital Twin</a></div>
+<div class="card"><div class="k">Concept</div><a href="./open-data-reproducibility.html">Open Data &amp; Reproducibility</a></div>
+<div class="card"><div class="k">Concept</div><a href="./graded-winding-pack.html">The Graded Winding Pack</a></div>
+<div class="card"><div class="k">Concept</div><a href="./wall-loading.html">Wall Loading &amp; Heat Flux</a></div>
+<div class="card"><div class="k">Concept</div><a href="./displacements-per-atom.html">Displacements Per Atom (dpa)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./tritium-inventory.html">Tritium Inventory &amp; Safety</a></div>
+<div class="card"><div class="k">Concept</div><a href="./impurity-seeding.html">Impurity Seeding &amp; the Radiative Divertor</a></div>
+<div class="card"><div class="k">Concept</div><a href="./lithium-6-no-breeding-claim.html">Lithium-6 &amp; the No-Breeding-Claim</a></div>
+<div class="card"><div class="k">Concept</div><a href="./power-purchase-agreement.html">Power Purchase Agreement (PPA)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./sawtooth-instability.html">The Sawtooth Instability</a></div>
+<div class="card"><div class="k">Concept</div><a href="./steady-state-operation.html">Steady-State Operation</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-startup.html">Plasma Startup &amp; the Ramp Phase</a></div>
+<div class="card"><div class="k">Concept</div><a href="./confinement-scaling-laws.html">Confinement Scaling Laws (IPB98)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./the-fusion-triple-product.html">The Fusion Triple Product</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-rotation.html">Plasma Rotation &amp; Flow Shear</a></div>
+<div class="card"><div class="k">Concept</div><a href="./neoclassical-tearing-modes.html">Neoclassical Tearing Modes (NTMs)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./magnetic-islands.html">Magnetic Islands</a></div>
+<div class="card"><div class="k">Concept</div><a href="./electron-bernstein-wave.html">Electron Bernstein Wave (EBW) Heating</a></div>
+<div class="card"><div class="k">Concept</div><a href="./high-harmonic-fast-wave.html">High-Harmonic Fast Wave (HHFW)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./neutral-beam-injection.html">Neutral Beam Injection (NBI)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./inertial-confinement-fusion.html">Inertial Confinement Fusion</a></div>
+<div class="card"><div class="k">Concept</div><a href="./energy-return-on-investment.html">Energy Return on Investment (EROI)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fuel-abundance-energy-security.html">Fuel Abundance &amp; Energy Security</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plant-lifetime.html">Plant Lifetime (30 Full-Power-Years)</a></div>
+<div class="card"><div class="k">Concept</div><a href="./remote-maintenance.html">Remote Maintenance</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fusion-and-decarbonization.html">Fusion &amp; Decarbonization</a></div>
+<div class="card"><div class="k">Concept</div><a href="./pellet-fuelling.html">Pellet Fuelling</a></div>
+<div class="card"><div class="k">Concept</div><a href="./effective-charge-zeff.html">Effective Charge (Z_eff) &amp; Plasma Purity</a></div>
+<div class="card"><div class="k">Concept</div><a href="./error-fields.html">Error Fields &amp; Correction</a></div>
+<div class="card"><div class="k">Concept</div><a href="./water-use-and-siting.html">Water Use &amp; Siting</a></div>
+<div class="card"><div class="k">Concept</div><a href="./grid-inertia.html">Grid Inertia &amp; Stability Services</a></div>
+<div class="card"><div class="k">Concept</div><a href="./fusion-waste.html">Fusion Waste &amp; Decommissioning</a></div>
+<div class="card"><div class="k">Concept</div><a href="./ion-and-electron-temperature.html">Ion &amp; Electron Temperature</a></div>
+<div class="card"><div class="k">Concept</div><a href="./plasma-density-and-fuelling.html">Plasma Density &amp; Fuelling</a></div>
+<div class="card"><div class="k">Concept</div><a href="./biological-shielding.html">Biological Shielding &amp; Site Safety</a></div>
+</div>
+<h2>Questions people ask <span class="seccount">· 90</span></h2>
+<div class="hubgrid">
+<div class="card"><div class="k">Question</div><a href="./does-d-he3-produce-neutrons.html">Does D–³He fusion produce neutrons?</a></div>
+<div class="card"><div class="k">Question</div><a href="./where-does-helium-3-come-from.html">Where does helium-3 come from?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-provide-baseload-power.html">Can fusion provide firm, baseload power?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-does-fusion-electricity-cost.html">What will fusion electricity cost?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-fusion-power-safe.html">Is fusion power safe?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-a-spherical-tokamak.html">What is a spherical tokamak?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-negative-triangularity.html">Why does Kronos use negative triangularity?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-nuclear-fusion.html">What is nuclear fusion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-fusion-differ-from-fission.html">How is fusion different from nuclear fission?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-is-fusion-so-hard.html">Why is fusion energy so hard to achieve?</a></div>
+<div class="card"><div class="k">Question</div><a href="./when-will-fusion-power-the-grid.html">When will fusion actually power the grid?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-fusion-energy-clean.html">Is fusion energy clean and renewable?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-a-fusion-reactor-melt-down.html">Can a fusion reactor explode or melt down?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-hot-is-a-fusion-plasma.html">How hot is a fusion plasma?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-fuels-does-fusion-use.html">What fuels does fusion use?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-fusion-make-electricity.html">How does a fusion plant actually make electricity?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-kronos-fusion-energy.html">What is Kronos Fusion Energy?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-makes-kronos-different.html">What makes Kronos different from other fusion companies?</a></div>
+<div class="card"><div class="k">Question</div><a href="./has-kronos-built-a-reactor-yet.html">Has Kronos built a fusion reactor yet?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-does-kronos-use-helium-3.html">Why does Kronos use helium-3 instead of tritium?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-kronos-fusion-aneutronic.html">Is Kronos fusion aneutronic?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-i-see-the-data-behind-kronos.html">Can I see the data behind Kronos's claims?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-such-a-strong-magnetic-field.html">Why does Kronos use such a strong magnetic field?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-kronos-handle-disruptions.html">How does Kronos handle plasma disruptions?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-direct-energy-conversion.html">What is direct energy conversion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-the-biggest-technical-risk.html">What is the biggest technical risk in the Kronos design?</a></div>
+<div class="card"><div class="k">Question</div><a href="./does-kronos-depend-on-a-breakthrough.html">Does Kronos depend on a scientific breakthrough?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-much-does-a-fusion-plant-cost.html">How much does a fusion plant cost?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-fusion-competitive-with-renewables.html">Is fusion competitive with solar and wind?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-power-a-data-center.html">Can fusion power a data center?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-much-electricity-does-one-metrovolt-produce.html">How much electricity does one MetroVolt produce?</a></div>
+<div class="card"><div class="k">Question</div><a href="./does-fusion-produce-radioactive-waste.html">Does fusion produce radioactive waste?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-tritium-dangerous.html">Is tritium dangerous?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-be-used-for-weapons.html">Can fusion energy be used to make weapons?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-aegis-used-for.html">What is AEGIS used for?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-is-fusion-valuable-for-defense.html">Why is fusion valuable for defense?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-can-i-partner-with-kronos.html">How can I partner with Kronos?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-a-tokamak-work.html">How does a tokamak work?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-plasma.html">What is plasma?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-do-you-confine-a-plasma.html">How do you confine something that hot?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-the-reactor-survive-the-heat.html">How does the reactor survive the heat?</a></div>
+<div class="card"><div class="k">Question</div><a href="./does-fusion-use-lasers.html">Does fusion use lasers?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-really-work-on-earth.html">Can fusion really work on Earth?</a></div>
+<div class="card"><div class="k">Question</div><a href="./isnt-fusion-always-30-years-away.html">Isn't fusion always 30 years away?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-should-i-believe-kronos-numbers.html">Why should I believe Kronos's numbers?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-would-prove-kronos-wrong.html">What would prove the Kronos design wrong?</a></div>
+<div class="card"><div class="k">Question</div><a href="./the-g1-testbed.html">What is the G1 confinement testbed?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-does-kronos-publish-everything.html">Why does Kronos publish all its data?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-kronos-compare-to-iter.html">How does Kronos compare to ITER?</a></div>
+<div class="card"><div class="k">Question</div><a href="./does-fusion-produce-co2.html">Does fusion produce any CO₂?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-much-land-does-a-fusion-plant-need.html">How much land does a fusion plant need?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-happens-to-the-helium.html">What happens to the helium a fusion plant makes?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-a-fusion-reactor-made-of.html">What is a fusion reactor made of?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-do-neutrons-matter-in-fusion.html">Why do neutrons matter in fusion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-does-low-neutron-mean.html">What does 'low-neutron' mean?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-a-superconductor.html">What is a superconductor, and why does fusion need one?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-strong-is-a-24-tesla-magnet.html">How strong is a 24-tesla magnet?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-scale-fast-enough-for-climate.html">Can fusion scale fast enough to matter for climate?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-many-fusion-plants-would-we-need.html">How many fusion plants would it take to matter?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-a-fusion-plant-follow-demand.html">Can a fusion plant follow demand?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-happens-if-a-fusion-plant-loses-power.html">What happens if a fusion plant loses power?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-it-safe-to-build-fusion-near-cities.html">Is it safe to build fusion near cities?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-firm-power.html">What is firm power?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-metrovolt-connect-to-the-grid.html">How does MetroVolt connect to the grid?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-make-hydrogen-or-industrial-heat.html">Can fusion make hydrogen or industrial heat?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-do-metrovolt-and-aegis-differ.html">How do MetroVolt and AEGIS differ?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-helium-3-really-mined-on-the-moon.html">Is helium-3 really mined on the moon?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-fusion-energy-like-a-hydrogen-bomb.html">Is fusion energy like a hydrogen bomb?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-deuterium-instead-of-hydrogen.html">Why deuterium instead of ordinary hydrogen?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-is-ai-used-in-a-fusion-plant.html">How is AI used in a fusion plant?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-a-burning-plasma.html">What is a burning plasma?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-precisely-must-the-plasma-be-controlled.html">How precisely must the plasma be controlled?</a></div>
+<div class="card"><div class="k">Question</div><a href="./has-anyone-achieved-net-energy-fusion.html">Has anyone achieved net-energy fusion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-fusion-better-than-fission.html">Is fusion better than fission?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-not-just-use-more-solar-and-batteries.html">Why not just build more solar and batteries?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-if-the-magnets-fail.html">What if the magnets fail?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-long-does-a-fusion-plant-last.html">How long does a fusion plant last?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-does-it-cost-to-run-a-fusion-plant.html">What does it cost to run a fusion plant?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-intellectual-property-does-kronos-hold.html">What intellectual property does Kronos hold?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-kronos-validate-its-simulations.html">How does Kronos validate its simulations?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-are-tier-1-and-tier-2-simulations.html">What are Tier-1 and Tier-2 simulations?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-fusions-environmental-impact.html">What is fusion's environmental impact?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-does-fusion-energy-matter.html">Why does fusion energy matter?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-are-the-main-approaches-to-fusion.html">What are the main approaches to fusion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-long-have-we-researched-fusion.html">How long have we been researching fusion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./can-fusion-power-ships-or-spacecraft.html">Can fusion power ships or spacecraft?</a></div>
+<div class="card"><div class="k">Question</div><a href="./how-does-kronos-business-work.html">How does Kronos's business work?</a></div>
+<div class="card"><div class="k">Question</div><a href="./is-fusion-safe-for-workers.html">Is fusion safe for the people who work there?</a></div>
+<div class="card"><div class="k">Question</div><a href="./why-compact-fusion.html">Why compact fusion?</a></div>
+<div class="card"><div class="k">Question</div><a href="./what-is-a-fusion-pilot-plant.html">What is a fusion pilot plant?</a></div>
+</div>
+<h2>Simulation register <span class="seccount">· 81</span></h2>
+<div class="hubgrid">
+<div class="card"><div class="k">Simulation register</div><a href="./s01.html">S01 — Systems-code self-consistent point design</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s02.html">S02 — Independent systems cross-check (FUSE)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s03.html">S03 — Free-boundary baseline equilibrium</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s04.html">S04 — Equilibrium variants (Mode B; q95≥5.5)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s05.html">S05 — Startup / ramp flux demand</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s06.html">S06 — Radial-build consistency</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s07.html">S07 — POPCON operating-space map</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s08.html">S08 — Monte-Carlo UQ</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s09.html">S09 — Sensitivity / tornado</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s10.html">S10 — Cross-code reconciliation ledger</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s11.html">S11 — Gyrokinetic turbulence (linear→nonlinear, EM, fast species)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s12.html">S12 — Gyrokinetic turbulence (linear→nonlinear, EM, fast species)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s13.html">S13 — Gyrokinetic turbulence (linear→nonlinear, EM, fast species)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s14.html">S14 — Gyrokinetic turbulence (linear→nonlinear, EM, fast species)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s15.html">S15 — Gyrokinetic turbulence (linear→nonlinear, EM, fast species)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s16.html">S16 — Quasilinear profile prediction (TGLF)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s17.html">S17 — QL cross-check (QuaLiKiz)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s18.html">S18 — Integrated transport — H98 gate</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s19.html">S19 — Time-dependent burn scenario</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s20.html">S20 — NT confinement-scaling placement</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s21.html">S21 — Ideal MHD no-wall kink</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s22.html">S22 — Ideal MHD with-wall</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s23.html">S23 — Ballooning/Mercier 2nd-stability</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s24.html">S24 — Vertical stability + VDE</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s25.html">S25 — RWM with rotation + kinetic</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s26.html">S26 — Hot-ion two-fluid balance</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s27.html">S27 — Fast-ion slowing-down (protons)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s28.html">S28 — Fast-ion slowing-down (alphas)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s29.html">S29 — Alfvén-eigenmode stability</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s30.html">S30 — Disruption + runaway</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s31.html">S31 — Disruption EM loads</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s32.html">S32 — SOL/divertor</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s33.html">S33 — NT density limit</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s34.html">S34 — Pedestal/edge gradient</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s35.html">S35 — 3-D neutronics</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s36.html">S36 — Inboard shield optimization (B4C vs WC/W2B5)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s37.html">S37 — REBCO fast-neutron fluence</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s38.html">S38 — Nuclear heating in cold mass</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s39.html">S39 — Activation / shutdown dose</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s40.html">S40 — Tritium inventory + DIR sensitivity</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s41.html">S41 — Tritium inventory + DIR sensitivity</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s42.html">S42 — Staged fuel self-sufficiency</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s43.html">S43 — Prompt-3He breeding</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s44.html">S44 — Fuel-mix Pfus sensitivity</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s45.html">S45 — D-D chain / fleet logistics</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s46.html">S46 — D-D chain / fleet logistics</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s47.html">S47 — Winding-pack EM-structural (24.6 T, R_c=1.40)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s48.html">S48 — Quench / dump</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s49.html">S49 — Demountable joint budget</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s50.html">S50 — Cryoplant load</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s51.html">S51 — DEC exhaust fraction (Apollo objection)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s52.html">S52 — Cusp expander orbit</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s53.html">S53 — TWDEC PIC efficiency</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s54.html">S54 — Venetian-blind collector</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s55.html">S55 — MHD/thermionic/PV bounding</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s56.html">S56 — sCO2 Brayton</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s57.html">S57 — Plant power-flow Sankey</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s58.html">S58 — N+1 reliability</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s59.html">S59 — HVDC export / grid dynamics</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s60.html">S60 — HVDC export / grid dynamics</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s61.html">S61 — Adaptive DEC re-weighting</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s62.html">S62 — FBG structural-health monitoring</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s63.html">S63 — LCOE / required-PPA MC</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s64.html">S64 — Economics tornado</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s65.html">S65 — DEC exhaust on closed field lines (extends S51)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s66.html">S66 — Two-point divertor / detachment (extends S32)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s67.html">S67 — TAE drive from fusion products (extends S29)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s68.html">S68 — Activation / shutdown-dose bound (extends S39)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s69.html">S69 — Final-size vertical rerun at κ=2.56 (extends S24)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s70.html">S70 — Quench hot-spot MIITs — 30 T bounding case (extends S48)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s71.html">S71 — Per-fuel DEC conversion (§4.5 / Table 24)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s72.html">S72 — Fast-ion channeling requirement (§2.8 / P6)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s73.html">S73 — Aneutronic-endpoint system closure (§4.7)</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s74.html">S74 — Lengyel impurity-seeding detachment window</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s75.html">S75 — Guiding-centre orbit exhaust fraction</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s76.html">S76 — Integrated 0-D systems code</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s77.html">S77 — Negative-triangularity δ-scan</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s78.html">S78 — Toroidal-field (B0/R_c) lever</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s79.html">S79 — Robustness &amp; upgrade envelope</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s80.html">S80 — Operating-window map</a></div>
+<div class="card"><div class="k">Simulation register</div><a href="./s81.html">S81 — Low-neutron lifetime dividend</a></div>
+</div>
+<h2>Comparisons &amp; deep-dives <span class="seccount">· 109</span></h2>
+<div class="hubgrid">
+<div class="card"><div class="k">Comparison</div><a href="./d-he3-vs-d-t.html">D–³He vs D–T Fuel</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./negative-vs-positive-triangularity.html">Negative vs Positive Triangularity</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./spherical-vs-conventional-tokamak.html">Spherical vs Conventional Tokamak</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-24-6-tesla-magnet-system.html">The 24.6 Tesla Magnet System</a></div>
+<div class="card"><div class="k">Application</div><a href="./firm-power-for-data-centers.html">Firm Fusion Power for Data Centers</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./d-he3-vs-p-11b.html">D–³He vs p–¹¹B Fuel</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./tokamak-vs-stellarator.html">Tokamak vs Stellarator</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./direct-conversion-vs-steam-cycle.html">Direct Conversion vs the Steam Cycle</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./hts-vs-lts-magnets.html">HTS vs LTS Magnets</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-geothermal.html">Fusion vs Geothermal</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-small-modular-reactors.html">Fusion vs Small Modular Reactors</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./compact-vs-conventional-fusion.html">Compact vs Conventional Fusion</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./magnetic-vs-inertial-confinement.html">Magnetic vs Inertial Confinement</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-staged-fuel-cycle-deep-dive.html">Deep Dive: The Staged D–³He Fuel Cycle</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-multi-modal-dec-train-deep-dive.html">Deep Dive: The Multi-Modal DEC Train</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-confinement-case-deep-dive.html">Deep Dive: The Confinement Case</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-industrial-heat.html">Fusion for Industrial Process Heat</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-green-hydrogen.html">Fusion for Green Hydrogen</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-desalination.html">Fusion for Desalination</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-coal.html">Fusion vs Coal</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-wind.html">Fusion vs Wind</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-battery-storage.html">Fusion vs Battery Storage</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-hydropower.html">Fusion vs Hydropower</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./d-he3-vs-d-d.html">D–³He vs D–D</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./private-vs-public-fusion.html">Private vs Public Fusion</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-magnet-and-shield-system-deep-dive.html">Deep Dive: The Magnet &amp; Shield System</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-hot-ion-posture-deep-dive.html">Deep Dive: The Hot-Ion Posture</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-open-questions-deep-dive.html">Deep Dive: The Open Questions</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-economics-of-metrovolt.html">Deep Dive: The Economics of MetroVolt</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-ai-native-plant-deep-dive.html">Deep Dive: The AI-Native Plant</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./disruptions-and-safety-deep-dive.html">Deep Dive: Disruptions &amp; Safety</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-ai-compute.html">Fusion for AI Compute</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-remote-microgrids.html">Fusion for Remote Microgrids</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-defense-installations.html">Fusion for Defense Installations</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-natural-gas.html">Fusion vs Natural Gas</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-solar.html">Fusion vs Solar</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./firm-vs-intermittent-power.html">Firm vs Intermittent Power</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./helium-3-terrestrial-vs-lunar.html">Helium-3: Terrestrial vs Lunar</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./baseload-vs-dispatchable-power.html">Baseload vs Dispatchable Power</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-gate-program-deep-dive.html">Deep Dive: The Gate Program</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-plant-power-flow-deep-dive.html">Deep Dive: The Plant Power Flow</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-divertor-challenge-deep-dive.html">Deep Dive: The Divertor Challenge</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./current-drive-and-bootstrap-deep-dive.html">Deep Dive: Current Drive &amp; Bootstrap</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-vertical-stability-problem-deep-dive.html">Deep Dive: The Vertical Stability Problem</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-neutronics-and-activation-deep-dive.html">Deep Dive: Neutronics &amp; Activation</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-district-heating.html">Fusion for District Heating</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-synthetic-fuels.html">Fusion for Synthetic Fuels</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-shipping.html">Fusion for Shipping</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./deuterium-vs-tritium.html">Deuterium vs Tritium</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-antimatter.html">Fusion vs Antimatter</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./tokamaks-vs-alternative-concepts.html">Tokamaks vs Alternative Concepts</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./copper-vs-superconducting-magnets.html">Copper vs Superconducting Magnets</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-fuel-vs-fission-fuel.html">Fusion Fuel vs Fission Fuel</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./plasma-facing-materials-deep-dive.html">Deep Dive: Plasma-Facing Materials</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./mhd-stability-deep-dive.html">Deep Dive: MHD Stability</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-he3-mass-balance-deep-dive.html">Deep Dive: The ³He Mass Balance</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-open-data-package-deep-dive.html">Deep Dive: The Open 81-Analysis Package</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./scientific-oversight-deep-dive.html">Deep Dive: Scientific Oversight &amp; Independent Audit</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-mining.html">Fusion for Mining</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-direct-air-capture.html">Fusion for Direct Air Capture</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-developing-economies.html">Fusion for Developing Economies</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-and-electrification.html">Fusion &amp; the Electrification of Everything</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-water-treatment.html">Fusion for Water Treatment</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./steady-state-vs-pulsed-operation.html">Steady-State vs Pulsed Operation</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-fission-safety.html">Fusion vs Fission Safety</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./high-vs-low-aspect-ratio.html">High vs Low Aspect Ratio</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./why-kronos-skips-dt-first.html">Why Kronos Skips D–T-First</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./the-compact-fusion-landscape.html">The Compact-Fusion Landscape</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-startup-sequence-deep-dive.html">Deep Dive: Cold Start to Grid</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-fast-ion-physics-deep-dive.html">Deep Dive: Fast-Ion Physics &amp; Channeling</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-radial-build-deep-dive.html">Deep Dive: The Radial Build &amp; Center Stack</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-heating-systems-deep-dive.html">Deep Dive: Heating &amp; Current-Drive Systems</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-fusion-pilot-plant-deep-dive.html">Deep Dive: The Fusion Pilot Plant</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-field-lever-upgrade-deep-dive.html">Deep Dive: The Field-Lever Upgrade Path</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-p11b-endpoint-deep-dive.html">Deep Dive: The p–¹¹B Endpoint</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-space-propulsion.html">Fusion for Space Propulsion</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-heavy-industry.html">Fusion for Heavy Industry</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-green-ammonia.html">Fusion for Green Ammonia</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./dc-native-vs-ac-output.html">DC-Native vs AC Output</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./one-large-plant-vs-many-small.html">One Large Plant vs Many Small</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-enhanced-geothermal.html">Fusion vs Enhanced Geothermal</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-fuelling-and-exhaust-deep-dive.html">Deep Dive: Fuelling &amp; Exhaust</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-cryogenic-system-deep-dive.html">Deep Dive: The Cryogenic System</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-power-electronics-deep-dive.html">Deep Dive: Power Electronics &amp; Grid Interface</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-vacuum-system-deep-dive.html">Deep Dive: The Vacuum System</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-tritium-and-fuel-processing-deep-dive.html">Deep Dive: Tritium &amp; Fuel Processing</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-diagnostic-constellation-deep-dive.html">Deep Dive: The Diagnostic Constellation</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-design-space-studies-deep-dive.html">Deep Dive: The Design-Space Studies (S77–S81)</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-remote-maintenance-deep-dive.html">Deep Dive: Remote Maintenance &amp; Availability</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-island-nations.html">Fusion for Island Nations</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-ev-charging.html">Fusion for EV Charging Networks</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-grid-resilience.html">Fusion for Grid Resilience</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-agriculture.html">Fusion for Controlled-Environment Agriculture</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-vs-space-based-solar.html">Fusion vs Space-Based Solar</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./fusion-generations.html">Fusion Generations: D–T, D–³He, p–¹¹B</a></div>
+<div class="card"><div class="k">Comparison</div><a href="./firm-clean-power-options-compared.html">Firm Clean Power Options Compared</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./what-first-plasma-means.html">Deep Dive: What First Plasma Means</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-four-part-paper-series-deep-dive.html">Deep Dive: The Four-Part Design Series</a></div>
+<div class="card"><div class="k">Deep-dive</div><a href="./the-lawson-triple-product-deep-dive.html">Deep Dive: Lawson &amp; the Triple Product</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-district-cooling.html">Fusion for District Cooling</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-disaster-response.html">Fusion for Disaster Response</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-arctic-and-extreme-environments.html">Fusion for Arctic &amp; Extreme Environments</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-hydrogen-hubs.html">Fusion for Hydrogen Hubs</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-campuses-and-microgrids.html">Fusion for Campuses &amp; Microgrids</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-metals-and-smelting.html">Fusion for Metals &amp; Smelting</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-and-aviation.html">Fusion &amp; Aviation</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-ports-and-logistics.html">Fusion for Ports &amp; Logistics Hubs</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-critical-infrastructure.html">Fusion for Critical Infrastructure</a></div>
+<div class="card"><div class="k">Application</div><a href="./fusion-for-space-habitats.html">Fusion for Space Habitats</a></div>
+</div>
+<h2>Team &amp; expertise <span class="seccount">· 4</span></h2>
+<div class="hubgrid">
+<div class="card"><div class="k">Founding partner</div><a href="./gerald-kulcinski.html">Dr. Gerald Kulcinski</a></div>
+<div class="card"><div class="k">Founding partner</div><a href="./carl-weggel.html">Dr. Carl Weggel</a></div>
+<div class="card"><div class="k">Founding partner</div><a href="./robert-weggel.html">Dr. Robert J. Weggel</a></div>
+<div class="card"><div class="k">Team &amp; expertise</div><a href="./the-fusion-hardware-behind-kronos.html">The Fusion Hardware Behind Kronos's Founders</a></div>
+</div>
+</main>
+<footer><div class="wrap">
+Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
+Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
+Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+</div></footer>
+</body></html>
