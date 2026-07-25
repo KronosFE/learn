@@ -3,14 +3,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Deep Dive: MHD Stability · Kronos Fusion Energy</title>
-<meta name="description" content="A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.33.">
+<meta name="description" content="A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.96.">
 <link rel="canonical" href="https://kronosfusionenergy.com/learn/mhd-stability-deep-dive.html">
 <meta property="og:title" content="Deep Dive: MHD Stability">
-<meta property="og:description" content="A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.33.">
+<meta property="og:description" content="A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.96.">
 <meta property="og:type" content="article">
 <meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: MHD Stability", "description": "A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.33.", "url": "https://kronosfusionenergy.com/learn/mhd-stability-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: MHD Stability", "description": "A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.96.", "url": "https://kronosfusionenergy.com/learn/mhd-stability-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -100,8 +100,8 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons &amp; deep-dives</div>
 <div class="kicker">Deep-dive</div>
 <h1>Deep Dive: MHD Stability</h1>
-<p class="lede">A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.33.</p>
-<dl class="kf"><div class="row"><dt>Kink</dt><dd>q95 ≥ 5.0 keeps it safe (S21)</dd></div><div class="row"><dt>Ballooning/Mercier</dt><dd>Pressure limits (S23)</dd></div><div class="row"><dt>Vertical</dt><dd>Margin 2.02 (S24/S69)</dd></div><div class="row"><dt>RWM</dt><dd>Feedback to reach β_N = 5.0 (S22/S25)</dd></div></dl>
+<p class="lede">A survey of the stability limits Kronos must respect — kink, ballooning, vertical, and resistive-wall modes — and how the design stays inside them at β_N = 4.96.</p>
+<dl class="kf"><div class="row"><dt>Kink</dt><dd>q95 ≥ 5.0 keeps it safe (S21)</dd></div><div class="row"><dt>Ballooning/Mercier</dt><dd>Pressure limits (S23)</dd></div><div class="row"><dt>Vertical</dt><dd>Margin 2.02 (S24/S69)</dd></div><div class="row"><dt>RWM</dt><dd>Feedback holds the wall-stabilized β_N ≤ 5.0 regime (S22/S25) — load-bearing</dd></div></dl>
 
 <p>Magnetohydrodynamic (MHD) stability sets the hard limits on how much pressure and current a plasma can hold
 before it disrupts. Kronos's deposited analyses walk through the whole chain:</p>
@@ -114,9 +114,10 @@ is held with a 2.02 control margin (S24, S69).</li>
 <li><b>Resistive wall mode</b> — the high-β instability, controlled by active
 <a href="./resistive-wall-mode.html">feedback</a> to reach toward the wall-stabilized limit (S22, S25).</li>
 </ul>
-<p>The binding constraint is the <a href="./troyon-limit.html">Troyon</a> beta limit: the design operates at
-β_N = 4.33 with a hard β_N ≤ 4.5 clamp, and the wall-stabilized β_N = 5.0 is the upside that RWM control unlocks
-(worth ~+24% fusion power, S79). Every one of these limits is deposited and checkable.</p>
+<p>The binding constraint is the <a href="./troyon-limit.html">Troyon</a> beta limit: the ratified Mode-D
+point operates at β_N = 4.96 inside the wall-stabilized regime, against the computed β_N ≤ 5.0 limit that RWM
+control makes load-bearing (the S79-priced envelope the re-basis adopted; the Mode-C-era 4.33/4.5 posture is
+labeled history). Every one of these limits is deposited and checkable.</p>
 <div class="related"><h3>Related</h3><a href="./plasma-beta.html">Plasma Beta (β) &rarr;</a><a href="./troyon-limit.html">The Troyon Beta Limit &rarr;</a><a href="./resistive-wall-mode.html">Resistive Wall Mode (RWM) &rarr;</a><a href="./kink-instability.html">The Kink Instability &rarr;</a></div>
 </main>
 <footer><div class="wrap">
