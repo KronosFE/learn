@@ -101,15 +101,15 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <div class="kicker">Concept</div>
 <h1>Fusion Neutronics</h1>
 <p class="lede">Neutronics is the study of how fusion neutrons travel, deposit energy, and activate materials. For a low-neutron plant, the numbers are far gentler.</p>
-<dl class="kf"><div class="row"><dt>What</dt><dd>Transport of neutrons through reactor materials</dd></div><div class="row"><dt>Concerns</dt><dd>Heating, damage (dpa), activation, shielding</dd></div><div class="row"><dt>Kronos neutron fraction</dt><dd>~5.25% (low-neutron)</dd></div><div class="row"><dt>High-fidelity check</dt><dd>OpenMC (S63, planned)</dd></div></dl>
+<dl class="kf"><div class="row"><dt>What</dt><dd>Transport of neutrons through reactor materials</dd></div><div class="row"><dt>Concerns</dt><dd>Heating, damage (dpa), activation, shielding</dd></div><div class="row"><dt>Kronos neutron fraction</dt><dd>7.70% operating (low-neutron)</dd></div><div class="row"><dt>High-fidelity check</dt><dd>OpenMC (S63, planned)</dd></div></dl>
 
 <p><b>Fusion neutronics</b> is the discipline of tracking where a reactor's neutrons go: how they scatter and slow
 through the wall and shield, how much heat and radiation damage (measured in displacements per atom, dpa) they
 deposit, and how much they <a href="./neutron-activation.html">activate</a> the structure. It sets the shield
 thickness, the component lifetimes, and the waste profile.</p>
 <p>For Kronos MetroVolt the neutronics is unusually gentle by fusion standards, because the
-<a href="./does-d-he3-produce-neutrons.html">low-neutron</a> D–³He fuel produces a neutron fraction around 5.25%
-— roughly 25× below D–T. The design carries an explicit neutron-fluence budget for the shielded center stack, and
+<a href="./does-d-he3-produce-neutrons.html">low-neutron</a> D–³He fuel produces a neutron fraction of 7.70%
+at the operating baseline — roughly an order of magnitude below D–T. The design carries an explicit neutron-fluence budget for the shielded center stack, and
 a high-fidelity OpenMC neutronics calculation (S63) is planned to fix the true shield and lifetime numbers.</p>
 <div class="gap"><b>Honest gap</b>A high-fidelity OpenMC neutronics run (S63) is planned but not yet complete; it will fix the true shield performance and component lifetimes. The reduced-order fluence ledger is the current basis.</div>
 <div class="related"><h3>Related</h3><a href="./neutron-activation.html">Neutron Activation &rarr;</a><a href="./does-d-he3-produce-neutrons.html">Does D–³He fusion produce neutrons? &rarr;</a><a href="./no-breeding-blanket.html">Why Kronos Needs No Breeding Blanket &rarr;</a><a href="./is-fusion-power-safe.html">Is fusion power safe? &rarr;</a></div>
