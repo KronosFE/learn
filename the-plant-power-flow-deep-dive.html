@@ -3,14 +3,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Deep Dive: The Plant Power Flow · Kronos Fusion Energy</title>
-<meta name="description" content="How 2.41 GW of fusion power becomes 0.61–0.84 GWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.">
+<meta name="description" content="How 1,221 MW of fusion power becomes 486 MWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.">
 <link rel="canonical" href="https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html">
 <meta property="og:title" content="Deep Dive: The Plant Power Flow">
-<meta property="og:description" content="How 2.41 GW of fusion power becomes 0.61–0.84 GWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.">
+<meta property="og:description" content="How 1,221 MW of fusion power becomes 486 MWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.">
 <meta property="og:type" content="article">
 <meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: The Plant Power Flow", "description": "How 2.41 GW of fusion power becomes 0.61–0.84 GWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.", "url": "https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: The Plant Power Flow", "description": "How 1,221 MW of fusion power becomes 486 MWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.", "url": "https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -100,21 +100,22 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons &amp; deep-dives</div>
 <div class="kicker">Deep-dive</div>
 <h1>Deep Dive: The Plant Power Flow</h1>
-<p class="lede">How 2.41 GW of fusion power becomes 0.61–0.84 GWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.</p>
-<dl class="kf"><div class="row"><dt>Fusion power</dt><dd>≈ 2.41 GW ceiling / ~1.5 GW baseline</dd></div><div class="row"><dt>Neutron fraction</dt><dd>~5.25% (low-neutron)</dd></div><div class="row"><dt>Recirculating</dt><dd>Heating (62 MW CD), magnets, cryo, BOP</dd></div><div class="row"><dt>Net electric</dt><dd>0.61–0.84 GWe per unit</dd></div></dl>
+<p class="lede">How 1,221 MW of fusion power becomes 486 MWe net — through the charged/neutron split, direct conversion, and the plant's own recirculating loads.</p>
+<dl class="kf"><div class="row"><dt>Fusion power</dt><dd>1,221 MW (frozen Mode-D point)</dd></div><div class="row"><dt>Neutron fraction</dt><dd>7.70% (low-neutron)</dd></div><div class="row"><dt>Recirculating</dt><dd>Heating (62 MW CD), magnets, cryo, BOP</dd></div><div class="row"><dt>Net electric</dt><dd>486 MWe (Q_eng 3.9, exhaust-honest)</dd></div></dl>
 
 <p>Following the energy from fusion reactions to grid electricity shows where a fusion plant's performance is won
 and lost. In Kronos MetroVolt (deposited power-flow analysis S57):</p>
 <ul>
-<li><b>Fusion power</b> of ≈ 2.41 GW (hot-ion ceiling) or ~1.5 GW (near-thermal baseline) is produced in the
-plasma.</li>
-<li>Only about <b>5.25%</b> emerges as neutrons (the <a href="./does-d-he3-produce-neutrons.html">low-neutron</a>
+<li><b>Fusion power</b> of 1,221 MW is produced in the plasma at the frozen near-thermal Mode-D point (the
+gated hot-ion ceiling of ≈2.41 GW is labeled history).</li>
+<li>Only <b>7.70%</b> emerges as neutrons (the <a href="./does-d-he3-produce-neutrons.html">low-neutron</a>
 advantage); the majority is charged particles and radiation.</li>
 <li><a href="./direct-energy-conversion.html">Direct energy conversion</a> captures the charged-particle and
 radiated energy at a blended efficiency, producing gross electricity without a steam cycle.</li>
 <li>The plant's own <b>recirculating loads</b> — 62 MW of current drive, the magnets, the
 <a href="./cryogenics.html">cryoplant</a>, and balance of plant — are subtracted.</li>
-<li>What remains is <b>0.61–0.84 GWe net</b> (engineering gain Q_eng ≈ 2.1–2.7).</li>
+<li>What remains is <b>486 MWe net</b> — 652 MWe gross less all plant loads — an engineering gain of
+Q_eng = 3.9 on the exhaust-honest ledger (the ceiling ledgers, 0.61–0.84 GWe, are labeled history).</li>
 </ul>
 <p>Minimizing recirculating power — especially via a high <a href="./bootstrap-fraction.html">bootstrap
 fraction</a> — is as important to the net number as the fusion power itself. See

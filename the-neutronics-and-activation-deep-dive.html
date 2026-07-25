@@ -101,15 +101,16 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <div class="kicker">Deep-dive</div>
 <h1>Deep Dive: Neutronics &amp; Activation</h1>
 <p class="lede">How a low-neutron design transforms the shielding, material lifetime, and waste picture — with a high-fidelity OpenMC calculation planned to fix the numbers.</p>
-<dl class="kf"><div class="row"><dt>Neutron fraction</dt><dd>~5.25–7.05% along the fuel schedule</dd></div><div class="row"><dt>Wall damage</dt><dd>30 dpa over 30 FPY (≤ 36 dpa qualification)</dd></div><div class="row"><dt>Shield</dt><dd>Compact center-stack shield; explicit fluence budget</dd></div><div class="row"><dt>High-fidelity</dt><dd>OpenMC (S63, planned)</dd></div></dl>
+<dl class="kf"><div class="row"><dt>Neutron fraction</dt><dd>7.70–10.20% (operating → banking; retired hot-ion evaluation 5.25–7.05%)</dd></div><div class="row"><dt>Wall damage</dt><dd>≈22 dpa over 30 FPY at 0.74 dpa/FPY (≤ ~36 dpa qualification)</dd></div><div class="row"><dt>Shield</dt><dd>Compact center-stack shield; explicit fluence budget</dd></div><div class="row"><dt>High-fidelity</dt><dd>OpenMC (S63, planned)</dd></div></dl>
 
 <p>Neutronics — how a reactor's neutrons deposit energy, damage materials, and activate structures — sets the
 shield thickness, the component lifetimes, and the waste profile. For Kronos it is unusually gentle, because being
 <a href="./does-d-he3-produce-neutrons.html">low-neutron</a> changes every one of those quantities.</p>
-<p>The neutron fraction runs 5.25–7.05% along the <a href="./fuel-staging.html">fuel schedule</a> — roughly 25×
-below D–T. That means <a href="./wall-loading.html">wall loading</a> around 0.10–0.12 MW/m², a first wall that
-accumulates only ~30 <a href="./displacements-per-atom.html">dpa</a> over 30 full-power-years (within its 36-dpa
-qualification, so it lasts the plant life), and far less <a href="./neutron-activation.html">activation</a> and
+<p>The neutron fraction runs 7.70–10.20% along the <a href="./fuel-staging.html">fuel schedule</a> (operating
+baseline to ³He-banking leg; the retired hot-ion evaluation carried 5.25–7.05%) — roughly an order of magnitude
+below D–T. That means <a href="./wall-loading.html">wall loading</a> of 0.074–0.089 MW/m², a first wall that
+accumulates only ~22 <a href="./displacements-per-atom.html">dpa</a> over 30 full-power-years (0.74 dpa/FPY,
+within its ~36-dpa qualification, so it lasts the plant life), and far less <a href="./neutron-activation.html">activation</a> and
 waste. It also lets the compact <a href="./the-center-stack.html">center-stack</a>
 <a href="./the-neutron-shield.html">shield</a> fit in the tight inboard space.</p>
 <p>The design carries an explicit neutron-fluence budget for the shielded center stack, and a high-fidelity
