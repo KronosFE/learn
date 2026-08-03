@@ -1,11 +1,16 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Plant Power Flow · Kronos Fusion Energy</title>
-<meta name="description" content="How power flows through each Kronos machine: the breeder's balance from 88.7 MW fusion to net output, and the burner's flow from fusion through direct conversion and axial loss to net electric."><link rel="canonical" href="https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html">
-<meta property="og:title" content="The Plant Power Flow"><meta property="og:description" content="How power flows through each Kronos machine: the breeder's balance from 88.7 MW fusion to net output, and the burner's flow from fusion through direct conversion and axial loss to net electric."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Live Simulation · Kronos Fusion Energy</title>
+<meta name="description" content="Kronos runs its physics live in your browser: the breeder engine executes in WebAssembly Python and the burner closure map is read from the deposited solver. Move the sliders, watch the design point re-derive.">
+<link rel="canonical" href="https://kronosfusionenergy.com/learn/the-live-simulation.html">
+<meta property="og:title" content="The Live Simulation">
+<meta property="og:description" content="Kronos runs its physics live in your browser: the breeder engine executes in WebAssembly Python and the burner closure map is read from the deposited solver. Move the sliders, watch the design point re-derive.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Plant Power Flow","description":"How power flows through each Kronos machine: the breeder's balance from 88.7 MW fusion to net output, and the burner's flow from fusion through direct conversion and axial loss to net electric.","url":"https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Live Simulation","description":"Kronos runs its physics live in your browser: the breeder engine executes in WebAssembly Python and the burner closure map is read from the deposited solver. Move the sliders, watch the design point re-derive.","url":"https://kronosfusionenergy.com/learn/the-live-simulation.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -92,30 +97,41 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
-<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons & deep-dives</div>
-<div class="kicker">Deep dive · Power balance</div>
-<h1>The plant power flow.</h1>
-<p class="lede">Follow the watts. Each Kronos machine has a distinct power path — and both are computed in the deposited code, not asserted. Here is where the energy goes.</p>
-<dl class="kf"><div class="row"><dt>Breeder fusion power</dt><dd>88.7 MW at Q 3.424</dd></div><div class="row"><dt>Burner (Mode M)</dt><dd>Q_E 1.31 · f_n 5.44%</dd></div><div class="row"><dt>Burner net (Aegis / MetroVolt)</dt><dd>+850 / +2832 MWe</dd></div><div class="row"><dt>Both</dt><dd>Computed in the deposits</dd></div></dl>
+<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Concept encyclopedia</div>
+<div class="kicker">Concept · Run it yourself</div>
+<h1>The live simulation.</h1>
+<p class="lede">Kronos does not ask you to take the numbers on faith. The physics runs in your browser — the same deposited code, live — so you can move the sliders and watch the design point re-derive.</p>
+<dl class="kf"><div class="row"><dt>What runs</dt><dd>The breeder engine, live in WebAssembly Python</dd></div><div class="row"><dt>Burner</dt><dd>Precomputed from the deposited solver — read live</dd></div><div class="row"><dt>Where</dt><dd>kronosfusionenergy.com/Physics_Validation_Simulation</dd></div><div class="row"><dt>Privacy</dt><dd>Runs entirely in your browser — nothing sent to a server</dd></div></dl>
 
-<p><b>The breeder.</b> HYPERION produces 88.7 MW of fusion power at a scientific gain of Q 3.424. A fraction
-recirculates to sustain the plasma; the rest, plus the value of the bred tritium and helium-3, is the
-machine's output. The full balance — including the electron-radiation and exhaust loss terms — is in the
-<a href="./the-two-deposits.html">breeder deposit</a>.</p>
-<p><b>The burner.</b> The D–³He plasma's power splits into charged particles and a small (5.44%) neutron
-fraction. Charged power is captured partly by <a href="./direct-energy-conversion.html">direct
-conversion</a>, partly thermally; a large <b>axial loss</b> streams out the open ends and must be spread
-over the end expanders. What remains after running the machine is the net electric — which
-<a href="./how-net-power-scales-with-length.html">scales with length</a>: +850 MWe at 440 m (Aegis),
-+2832 MWe at 1400 m (MetroVolt). The engineering gain that summarizes it is Q_E 1.31.</p>
+<p>The <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a> is a companion to the two papers and the two
+deposits. It loads the breeder's evaluator into a WebAssembly Python runtime and re-derives the frozen
+point (Q 3.424) before it unlocks the controls — so what you interact with is the real evaluator, not a
+mock-up.</p>
+<ul>
+<li><b>Breeder — live.</b> Move ion temperature, density, field, aspect ratio and breeding ratio; watch
+Q, fusion power, plasma current and tritium rate update from the deposited power balance.</li>
+<li><b>Burner — the closure map.</b> The mirror engine needs SciPy, too heavy for the browser, so its
+solver output is precomputed across the closing window from the deposited source and read live. Slide the
+helium-3 fraction and watch Q_E and the neutron fraction move along the
+<a href="./the-fuel-cleanliness-trajectory.html">cleanliness trajectory</a>.</li>
+<li><b>Reactivity.</b> The Bosch–Hale curves for D–T, D–D and D–³He, computed live — the reason the two
+machines burn different fuels.</li>
+<li><b>Environment.</b> Waste class, public dose, and how Kronos compares to other fuels and machines.</li>
+</ul>
+<p>Every panel carries its own honesty rails: the breeder's availability and triangularity caveats, the
+burner's <a href="./the-plug-density-requirement.html">plug-density requirement</a>. The point of running
+it live is that you can find the gaps yourself.</p>
 
-<div class="gap"><b>The load-bearing term</b>The burner's balance closes only if the end plugs hit the required density; the axial-loss and plug terms are where the <a href='./the-plug-density-requirement.html'>requirement</a> lives.</div>
-<div class="related"><h3>Related</h3><a href="./engineering-gain.html">Engineering gain (Q_E) &rarr;</a><a href="./the-mode-m-closing-point.html">The Mode M closing point &rarr;</a><a href="./how-net-power-scales-with-length.html">How net power scales with length &rarr;</a><a href="./direct-energy-conversion.html">Direct energy conversion &rarr;</a></div>
+<div class="gap"><b>What it is not</b>It is a conceptual-design and simulation study. No machine has been built; the burner closing point is requirement-class. The simulation shows what the physics predicts, with its conditions attached.</div>
+<div class="related"><h3>Related</h3><a href="./the-two-deposits.html">The two open deposits &rarr;</a><a href="./the-mode-m-closing-point.html">The Mode M closing point &rarr;</a><a href="./what-is-hyperion.html">What is HYPERION? &rarr;</a><a href="./the-two-papers-2026.html">The two 2026 papers &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
-(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
-burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
+Two machines: <b>HYPERION</b>, the spherical-tokamak D–T breeder, and the D–³He tandem-mirror burner
+(built as <b>Aegis</b> and <b>MetroVolt</b>). Open data &amp; code:
+breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0).
+Run the physics yourself: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
+Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
 </div></footer>
 </body></html>

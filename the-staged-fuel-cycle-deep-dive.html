@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Deep Dive: The Staged D–³He Fuel Cycle · Kronos Fusion Energy</title>
-<meta name="description" content="A walk through the Kronos fuel roadmap — from D–T commissioning through D-rich and ³He-rich D–³He to the p–¹¹B endpoint — and how the plant breeds its own helium-3.">
-<link rel="canonical" href="https://kronosfusionenergy.com/learn/the-staged-fuel-cycle-deep-dive.html">
-<meta property="og:title" content="Deep Dive: The Staged D–³He Fuel Cycle">
-<meta property="og:description" content="A walk through the Kronos fuel roadmap — from D–T commissioning through D-rich and ³He-rich D–³He to the p–¹¹B endpoint — and how the plant breeds its own helium-3.">
-<meta property="og:type" content="article">
-<meta name="robots" content="index,follow">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Fuel Cycle, In Depth · Kronos Fusion Energy</title>
+<meta name="description" content="A deeper look at the Kronos breed-then-burn fuel cycle: how a D–T spherical tokamak breeds tritium and helium-3, and how that decay inventory seeds the D–³He tandem-mirror burner."><link rel="canonical" href="https://kronosfusionenergy.com/learn/the-staged-fuel-cycle-deep-dive.html">
+<meta property="og:title" content="The Fuel Cycle, In Depth"><meta property="og:description" content="A deeper look at the Kronos breed-then-burn fuel cycle: how a D–T spherical tokamak breeds tritium and helium-3, and how that decay inventory seeds the D–³He tandem-mirror burner."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: The Staged D–³He Fuel Cycle", "description": "A walk through the Kronos fuel roadmap — from D–T commissioning through D-rich and ³He-rich D–³He to the p–¹¹B endpoint — and how the plant breeds its own helium-3.", "url": "https://kronosfusionenergy.com/learn/the-staged-fuel-cycle-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Fuel Cycle, In Depth","description":"A deeper look at the Kronos breed-then-burn fuel cycle: how a D–T spherical tokamak breeds tritium and helium-3, and how that decay inventory seeds the D–³He tandem-mirror burner.","url":"https://kronosfusionenergy.com/learn/the-staged-fuel-cycle-deep-dive.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -94,35 +89,33 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
-<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
-<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons &amp; deep-dives</div>
-<div class="kicker">Deep-dive</div>
-<h1>Deep Dive: The Staged D–³He Fuel Cycle</h1>
-<p class="lede">A walk through the Kronos fuel roadmap — from D–T commissioning through D-rich and ³He-rich D–³He to the p–¹¹B endpoint — and how the plant breeds its own helium-3.</p>
-<dl class="kf"><div class="row"><dt>Stage 0</dt><dd>D–T — commissioning</dd></div><div class="row"><dt>Baseline</dt><dd>D-rich D–³He (commercial)</dd></div><div class="row"><dt>Optimum</dt><dd>³He-rich (DEC η ≈ 0.60)</dd></div><div class="row"><dt>Endpoint</dt><dd>p–¹¹B (gated, aneutronic)</dd></div></dl>
+<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons & deep-dives</div>
+<div class="kicker">Deep dive · Fuel cycle</div>
+<h1>The fuel cycle, in depth.</h1>
+<p class="lede">The Kronos fuel cycle is a hand-off between two machines. This is how the breeder's output becomes the burner's fuel — and where the honest limits are.</p>
+<dl class="kf"><div class="row"><dt>Breeder fuel</dt><dd>Deuterium + tritium (bred on site)</dd></div><div class="row"><dt>Breeder TBR</dt><dd>Up to 1.8 (a design lever)</dd></div><div class="row"><dt>Decay product</dt><dd>Helium-3 (12.3-yr tritium half-life)</dd></div><div class="row"><dt>Burner fuel</dt><dd>Deuterium + helium-3</dd></div></dl>
 
-<p>The Kronos fuel strategy is not a single fuel but a <b>staged cycle</b> that moves toward ever-lower neutron
-output as the machine and program mature. Each stage trades higher physics difficulty for a cleaner reaction.</p>
-<ul>
-<li><b>Stage 0 — D–T.</b> A brief commissioning fuel; easy to ignite, used to bring the plant up.</li>
-<li><b>D-rich D–³He.</b> The commercial baseline — <a href="./does-d-he3-produce-neutrons.html">low-neutron</a>,
-charged-particle-rich, and directly convertible.</li>
-<li><b>³He-rich D–³He.</b> The conversion optimum, where <a href="./direct-energy-conversion.html">DEC</a>
-efficiency peaks near η ≈ 0.60 (analysis S71).</li>
-<li><b>p–¹¹B endpoint.</b> The gated, truly <a href="./proton-boron-11.html">aneutronic</a> destination.</li>
-</ul>
-<p>Throughout, the plant <a href="./catalyzed-d-d.html">breeds its own helium-3</a> via the catalyzed D–D branch,
-so it isn't hostage to scarce external ³He. The neutron fraction is quoted as a range (7.70–10.20% across the
-Mode-D operating and banking legs; 5.25–7.05% was the retired hot-ion evaluation) precisely
-because it changes along this schedule. Staging lets Kronos earn revenue on an achievable baseline while advancing
-toward the cleanest reactions.</p>
-<div class="related"><h3>Related</h3><a href="./fuel-staging.html">The Staged Fuel Cycle &rarr;</a><a href="./d-he3-vs-d-t.html">D–³He vs D–T Fuel &rarr;</a><a href="./catalyzed-d-d.html">Catalyzed D–D Fuel Cycle &rarr;</a><a href="./proton-boron-11.html">Proton–Boron-11 (p–¹¹B) Fusion &rarr;</a></div>
+<p>The cycle begins in the <a href="./what-is-hyperion.html">breeder</a>. HYPERION burns D–T; its neutrons
+are captured to breed tritium at a ratio treated as a design lever (1.1 / 1.5 / 1.8 in the scan), yielding
+about 4 kg/yr at the design point. Tritium is unstable — it decays with a 12.3-year half-life into
+<b>helium-3</b>, so an aging tritium inventory becomes a helium-3 supply of roughly 1.97 kg/yr.</p>
+<p>That helium-3 is the seed fuel for the <a href="./what-is-a-tandem-mirror.html">burner</a>, which runs
+D–³He at its <a href="./the-mode-m-closing-point.html">Mode M closing point</a>. Decay helium-3 is enough
+to run a ~10 MWe burner demonstrator — but not a commercial fleet, which is why the fleet is honestly
+<a href="./the-breeder-first-strategy.html">gated on an external (lunar) helium-3 supply</a>.</p>
+<p>There is no single-reactor "staged" ladder here: the fuel cycle is a hand-off between two purpose-built
+machines.</p>
+
+<div class="gap"><b>Correction note</b>This deep-dive previously described a staged single-reactor cycle with a p–¹¹B endpoint. Superseded: the frozen design is breed-then-burn across two machines, and the burner fuel is D–³He (not p–¹¹B).</div>
+<div class="related"><h3>Related</h3><a href="./fuel-staging.html">The fuel strategy: breed, then burn &rarr;</a><a href="./the-breeder-first-strategy.html">The breeder-first strategy &rarr;</a><a href="./tritium.html">Tritium &rarr;</a><a href="./helium-3.html">Helium-3 &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
-Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
+(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
 </div></footer>
 </body></html>

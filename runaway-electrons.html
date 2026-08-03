@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Runaway Electrons · Kronos Fusion Energy</title>
-<meta name="description" content="During a disruption, electrons can be accelerated to near light speed, forming a damaging beam. Runaway mitigation at 43 MA is a Kronos open item.">
-<link rel="canonical" href="https://kronosfusionenergy.com/learn/runaway-electrons.html">
-<meta property="og:title" content="Runaway Electrons">
-<meta property="og:description" content="During a disruption, electrons can be accelerated to near light speed, forming a damaging beam. Runaway mitigation at 43 MA is a Kronos open item.">
-<meta property="og:type" content="article">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Runaway electrons are a tokamak disruption hazard: electrons accelerated to high energy that can damage the wall. The Kronos breeder must mitigate them; the tandem-mirror burner, having no current, cannot generate them this way."><link rel="canonical" href="https://kronosfusionenergy.com/learn/runaway-electrons.html">
+<meta property="og:title" content="Runaway Electrons"><meta property="og:description" content="Runaway electrons are a tokamak disruption hazard: electrons accelerated to high energy that can damage the wall. The Kronos breeder must mitigate them; the tandem-mirror burner, having no current, cannot generate them this way."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Runaway Electrons", "description": "During a disruption, electrons can be accelerated to near light speed, forming a damaging beam. Runaway mitigation at 43 MA is a Kronos open item.", "url": "https://kronosfusionenergy.com/learn/runaway-electrons.html", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Kronos Fusion Energy Glossary", "url": "https://kronosfusionenergy.com/learn"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Runaway Electrons","description":"Runaway electrons are a tokamak disruption hazard: electrons accelerated to high energy that can damage the wall. The Kronos breeder must mitigate them; the tandem-mirror burner, having no current, cannot generate them this way.","url":"https://kronosfusionenergy.com/learn/runaway-electrons.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -94,30 +89,32 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
-<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
 <div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Concept encyclopedia</div>
-<div class="kicker">Concept</div>
-<h1>Runaway Electrons</h1>
-<p class="lede">During a disruption, electrons can be accelerated to near light speed, forming a damaging beam. Runaway mitigation at 43 MA is a Kronos open item.</p>
-<dl class="kf"><div class="row"><dt>What</dt><dd>Electrons accelerated to relativistic energies</dd></div><div class="row"><dt>When</dt><dd>During the current quench of a disruption</dd></div><div class="row"><dt>Danger</dt><dd>A focused beam that can damage the wall</dd></div><div class="row"><dt>Kronos status</dt><dd>Mitigation at 43 MA is an open item</dd></div></dl>
+<div class="kicker">Concept · Tokamak physics</div>
+<h1>Runaway electrons.</h1>
+<p class="lede">During a tokamak disruption, some electrons can be accelerated to damaging energies — a 'runaway' beam. It's a hazard the breeder must manage, and one the burner's geometry sidesteps.</p>
+<dl class="kf"><div class="row"><dt>What they are</dt><dd>Electrons accelerated to high energy in a disruption</dd></div><div class="row"><dt>Risk</dt><dd>Localized wall damage</dd></div><div class="row"><dt>Breeder</dt><dd>Mitigated as part of disruption handling</dd></div><div class="row"><dt>Burner</dt><dd>No current-driven runaway channel</dd></div></dl>
 
-<p><b>Runaway electrons</b> form during the current-quench phase of a <a href="./plasma-disruption.html">
-disruption</a>: the strong electric field induced as the plasma current collapses can accelerate a seed population
-of electrons to near light speed faster than collisions slow them down. The result is a multi-mega-amp beam of
-relativistic electrons that, if it strikes the wall in a focused spot, can cause serious localized damage.</p>
-<p>Because runaway severity grows with plasma current, Kronos MetroVolt's high
-<a href="./plasma-current.html">I_p = 43.0 MA</a> makes this a genuine challenge, and the design series is candid
-that <b>runaway mitigation remains an open engineering item</b> (flagged in the disruption analyses at 43 MA). It
-is one of the honestly-ranked open questions the gate program must close, alongside disruption thermal and
-electromagnetic loads.</p>
-<div class="gap"><b>Honest gap</b>Runaway-electron mitigation at 43 MA is carried as an open engineering item — the disruption thermal and EM loads are budgeted, but a validated runaway-mitigation scheme is outstanding.</div>
-<div class="related"><h3>Related</h3><a href="./plasma-disruption.html">Plasma Disruption &rarr;</a><a href="./plasma-current.html">Plasma Current (I_p) &rarr;</a><a href="./vertical-displacement-event.html">Vertical Displacement Event (VDE) &rarr;</a><a href="./edge-localized-modes.html">Edge-Localized Modes (ELMs) &rarr;</a></div>
+<p>When a tokamak <a href="./plasma-disruption.html">disrupts</a>, the collapsing current can induce strong
+electric fields that accelerate a small population of electrons to very high energy. This
+<b>runaway electron</b> beam can drill localized damage into plasma-facing components, so mitigation
+(massive gas or pellet injection) is a required system on any large tokamak — including the Kronos
+<a href="./what-is-hyperion.html">breeder</a>.</p>
+<p>The <a href="./what-is-a-tandem-mirror.html">burner</a> does not have the current-quench mechanism that
+drives runaways in a tokamak, because it has <a href="./plasma-current.html">no plasma current</a> to
+quench. That is another way the open-field-line architecture removes a tokamak failure mode rather than
+mitigating it.</p>
+
+
+<div class="related"><h3>Related</h3><a href="./plasma-disruption.html">Plasma disruption &rarr;</a><a href="./how-does-kronos-handle-disruptions.html">How does Kronos handle disruptions? &rarr;</a><a href="./plasma-facing-components.html">Plasma-facing components &rarr;</a><a href="./plasma-current.html">Plasma current (I_p) &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
-Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
+(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
 </div></footer>
 </body></html>

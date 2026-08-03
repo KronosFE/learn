@@ -1,11 +1,16 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Plant Power Flow · Kronos Fusion Energy</title>
-<meta name="description" content="How power flows through each Kronos machine: the breeder's balance from 88.7 MW fusion to net output, and the burner's flow from fusion through direct conversion and axial loss to net electric."><link rel="canonical" href="https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html">
-<meta property="og:title" content="The Plant Power Flow"><meta property="og:description" content="How power flows through each Kronos machine: the breeder's balance from 88.7 MW fusion to net output, and the burner's flow from fusion through direct conversion and axial loss to net electric."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Two Open Deposits · Kronos Fusion Energy</title>
+<meta name="description" content="Every Kronos number traces to one of two citable Zenodo deposits: the spherical-tokamak breeder (DOI 10.5281/zenodo.21746157) and the D–³He tandem-mirror burner (DOI 10.5281/zenodo.21746479), both CC BY 4.0.">
+<link rel="canonical" href="https://kronosfusionenergy.com/learn/the-two-deposits.html">
+<meta property="og:title" content="The Two Open Deposits">
+<meta property="og:description" content="Every Kronos number traces to one of two citable Zenodo deposits: the spherical-tokamak breeder (DOI 10.5281/zenodo.21746157) and the D–³He tandem-mirror burner (DOI 10.5281/zenodo.21746479), both CC BY 4.0.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Plant Power Flow","description":"How power flows through each Kronos machine: the breeder's balance from 88.7 MW fusion to net output, and the burner's flow from fusion through direct conversion and axial loss to net electric.","url":"https://kronosfusionenergy.com/learn/the-plant-power-flow-deep-dive.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Two Open Deposits","description":"Every Kronos number traces to one of two citable Zenodo deposits: the spherical-tokamak breeder (DOI 10.5281/zenodo.21746157) and the D–³He tandem-mirror burner (DOI 10.5281/zenodo.21746479), both CC BY 4.0.","url":"https://kronosfusionenergy.com/learn/the-two-deposits.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -92,30 +97,42 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
-<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons & deep-dives</div>
-<div class="kicker">Deep dive · Power balance</div>
-<h1>The plant power flow.</h1>
-<p class="lede">Follow the watts. Each Kronos machine has a distinct power path — and both are computed in the deposited code, not asserted. Here is where the energy goes.</p>
-<dl class="kf"><div class="row"><dt>Breeder fusion power</dt><dd>88.7 MW at Q 3.424</dd></div><div class="row"><dt>Burner (Mode M)</dt><dd>Q_E 1.31 · f_n 5.44%</dd></div><div class="row"><dt>Burner net (Aegis / MetroVolt)</dt><dd>+850 / +2832 MWe</dd></div><div class="row"><dt>Both</dt><dd>Computed in the deposits</dd></div></dl>
+<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Concept encyclopedia</div>
+<div class="kicker">Concept · Open record</div>
+<h1>The two open deposits.</h1>
+<p class="lede">Kronos publishes its code and data, not just its claims. Two citable archives hold the physics behind both machines — read them, run them, check us.</p>
+<dl class="kf"><div class="row"><dt>Breeder deposit</dt><dd>DOI 10.5281/zenodo.21746157</dd></div><div class="row"><dt>Burner deposit</dt><dd>DOI 10.5281/zenodo.21746479</dd></div><div class="row"><dt>Licence</dt><dd>CC BY 4.0</dd></div><div class="row"><dt>Community</dt><dd>zenodo.org/communities/kronos_fusion_energy</dd></div></dl>
 
-<p><b>The breeder.</b> HYPERION produces 88.7 MW of fusion power at a scientific gain of Q 3.424. A fraction
-recirculates to sustain the plasma; the rest, plus the value of the bred tritium and helium-3, is the
-machine's output. The full balance — including the electron-radiation and exhaust loss terms — is in the
-<a href="./the-two-deposits.html">breeder deposit</a>.</p>
-<p><b>The burner.</b> The D–³He plasma's power splits into charged particles and a small (5.44%) neutron
-fraction. Charged power is captured partly by <a href="./direct-energy-conversion.html">direct
-conversion</a>, partly thermally; a large <b>axial loss</b> streams out the open ends and must be spread
-over the end expanders. What remains after running the machine is the net electric — which
-<a href="./how-net-power-scales-with-length.html">scales with length</a>: +850 MWe at 440 m (Aegis),
-+2832 MWe at 1400 m (MetroVolt). The engineering gain that summarizes it is Q_E 1.31.</p>
+<p>The Kronos claims are meant to be checkable. Rather than describe the physics and ask you to trust the
+summary, the company deposits the evaluators, the input data, and reproduction runbooks in two archives
+with permanent DOIs.</p>
+<dl class="kf">
+<div class="row"><dt>The breeder</dt><dd>The spherical-tokamak D–T breeder (HYPERION): a pure-NumPy
+evaluator that reproduces the frozen design point — Q 3.424, 88.7 MW, 9.86 MA, ~4 kg/yr tritium —
+from one command. <a href="https://doi.org/10.5281/zenodo.21746157"><b>DOI 10.5281/zenodo.21746157</b></a></dd></div>
+<div class="row"><dt>The burner</dt><dd>The D–³He tandem-mirror generator: the mirror engine, the closure
+suite, and the frozen <a href="./the-fuel-cleanliness-trajectory.html">fuel-cleanliness trajectory</a>.
+Physics only — economics are deliberately out of scope.
+<a href="https://doi.org/10.5281/zenodo.21746479"><b>DOI 10.5281/zenodo.21746479</b></a></dd></div>
+</dl>
+<p>Both engines report their own gaps: the breeder's damage-life-limited availability and its
+triangularity-sign caveat; the burner's <a href="./the-plug-density-requirement.html">plug-density
+requirement</a> and corrected bremsstrahlung. Named, not hidden. Both papers are submitted to IOP with
+peer review in progress; arXiv preprints link on posting.</p>
+<p>You do not need to download anything to see them run: the <a href="./the-live-simulation.html">live
+simulation</a> executes the breeder engine in your browser and reads the burner's precomputed closure
+map — the exact deposited code.</p>
 
-<div class="gap"><b>The load-bearing term</b>The burner's balance closes only if the end plugs hit the required density; the axial-loss and plug terms are where the <a href='./the-plug-density-requirement.html'>requirement</a> lives.</div>
-<div class="related"><h3>Related</h3><a href="./engineering-gain.html">Engineering gain (Q_E) &rarr;</a><a href="./the-mode-m-closing-point.html">The Mode M closing point &rarr;</a><a href="./how-net-power-scales-with-length.html">How net power scales with length &rarr;</a><a href="./direct-energy-conversion.html">Direct energy conversion &rarr;</a></div>
+<div class="gap"><b>What replaced the old deposit</b>These two deposits supersede the earlier single archive (retired DOI 10.5281/zenodo.21248916) and its 81-analysis register. The physics moved to a two-machine structure; the record moved with it.</div>
+<div class="related"><h3>Related</h3><a href="./the-live-simulation.html">The live simulation &rarr;</a><a href="./what-is-hyperion.html">What is HYPERION? &rarr;</a><a href="./the-two-papers-2026.html">The two 2026 papers &rarr;</a><a href="./can-i-see-the-data-behind-kronos.html">Can I see the data behind Kronos? &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
-(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
-burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
+Two machines: <b>HYPERION</b>, the spherical-tokamak D–T breeder, and the D–³He tandem-mirror burner
+(built as <b>Aegis</b> and <b>MetroVolt</b>). Open data &amp; code:
+breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0).
+Run the physics yourself: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
+Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
 </div></footer>
 </body></html>

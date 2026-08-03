@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Deep Dive: The Gate Program · Kronos Fusion Energy</title>
-<meta name="description" content="Kronos advances through pre-registered gates — G1 confinement, G2 magnet, G3 fuel loop — with a pilot plant between the testbed and the commercial unit.">
-<link rel="canonical" href="https://kronosfusionenergy.com/learn/the-gate-program-deep-dive.html">
-<meta property="og:title" content="Deep Dive: The Gate Program">
-<meta property="og:description" content="Kronos advances through pre-registered gates — G1 confinement, G2 magnet, G3 fuel loop — with a pilot plant between the testbed and the commercial unit.">
-<meta property="og:type" content="article">
-<meta name="robots" content="index,follow">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Gate Program, In Depth · Kronos Fusion Energy</title>
+<meta name="description" content="A closer look at the Kronos staged-validation logic: how each gate maps to a named requirement and a falsifiable claim, from the breeder's confinement and exhaust to the burner's plug-density physics."><link rel="canonical" href="https://kronosfusionenergy.com/learn/the-gate-program-deep-dive.html">
+<meta property="og:title" content="The Gate Program, In Depth"><meta property="og:description" content="A closer look at the Kronos staged-validation logic: how each gate maps to a named requirement and a falsifiable claim, from the breeder's confinement and exhaust to the burner's plug-density physics."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: The Gate Program", "description": "Kronos advances through pre-registered gates — G1 confinement, G2 magnet, G3 fuel loop — with a pilot plant between the testbed and the commercial unit.", "url": "https://kronosfusionenergy.com/learn/the-gate-program-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Gate Program, In Depth","description":"A closer look at the Kronos staged-validation logic: how each gate maps to a named requirement and a falsifiable claim, from the breeder's confinement and exhaust to the burner's plug-density physics.","url":"https://kronosfusionenergy.com/learn/the-gate-program-deep-dive.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -94,37 +89,36 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
-<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
-<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons &amp; deep-dives</div>
-<div class="kicker">Deep-dive</div>
-<h1>Deep Dive: The Gate Program</h1>
-<p class="lede">Kronos advances through pre-registered gates — G1 confinement, G2 magnet, G3 fuel loop — with a pilot plant between the testbed and the commercial unit.</p>
-<dl class="kf"><div class="row"><dt>G1</dt><dd>Confinement testbed — NT-ST, ~$0.5B, ~4 yr</dd></div><div class="row"><dt>G2</dt><dd>Magnet & peak field (≥25 T; 24.42 T operating envelope)</dd></div><div class="row"><dt>G3</dt><dd>Fuel loop (>95% single-pass DIR)</dd></div><div class="row"><dt>FPP</dt><dd>Pilot plant between G1 and commercial</dd></div></dl>
+<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons & deep-dives</div>
+<div class="kicker">Deep dive · Validation</div>
+<h1>The gate program, in depth.</h1>
+<p class="lede">The gate program is the bridge between the open questions and a built machine. Each gate is a measurement of one named requirement — pass to proceed, fail to revise.</p>
+<dl class="kf"><div class="row"><dt>Gate 1</dt><dd>Confinement — the breeder's H₉₈ ≈ 2.28 bet</dd></div><div class="row"><dt>Gate 2</dt><dd>Exhaust — the ≈90% radiated-fraction requirement</dd></div><div class="row"><dt>Burner gate</dt><dd>Plug-density physics (the largest open item)</dd></div><div class="row"><dt>Rule</dt><dd>One gate, one falsifiable claim</dd></div></dl>
 
-<p>Kronos structures development as a <b>gate program</b> — each gate retires a specific, load-bearing risk with a
-real experiment before the next commitment, and carries pre-registered
-<a href="./the-falsifiable-seven.html">predictions</a> published regardless of outcome.</p>
-<ul>
-<li><b>G1 — Confinement testbed.</b> A sub-scale negative-triangularity spherical tokamak (3 T, R₀ = 0.85 m,
-~$0.5 B, ~4 years to first plasma) that measures confinement (P1), the hot-ion posture (P2), aligned high-β_p (P7),
-and the <a href="./fast-ion-channeling.html">channeling</a> proof-of-principle (P6). The single most consequential
-step — it tests the scaling; only the full plant tests the value.</li>
-<li><b>G2 — Magnet &amp; peak field.</b> Sustained ≥ 25 T conductor performance and the
-<a href="./the-24-6-tesla-magnet-system.html">24.42 T operating envelope</a> (P3; qualified at the 24.6 T
-Mode-C-era stress basis).</li>
-<li><b>G3 — Fuel loop.</b> &gt; 95% single-pass <a href="./direct-internal-recovery.html">direct internal
-recovery</a> (P4).</li>
-</ul>
-<p>Between the testbed and full <a href="./metrovolt.html">MetroVolt</a> sits a
-<a href="./what-is-a-fusion-pilot-plant.html">fusion pilot plant</a> (R₀ = 2.7 m, ~0.25 GW-class) that proves
-integrated operation.</p>
-<div class="related"><h3>Related</h3><a href="./the-gate-program.html">The Gate Program (G1–G3) &rarr;</a><a href="./the-falsifiable-seven.html">The Falsifiable Seven &rarr;</a><a href="./the-g1-testbed.html">What is the G1 confinement testbed? &rarr;</a><a href="./what-is-a-fusion-pilot-plant.html">What is a fusion pilot plant? &rarr;</a></div>
+<p>Each gate exists to convert a <a href="./the-open-questions-deep-dive.html">named open question</a> into
+a measured result, in priority order.</p>
+<ol>
+<li><b>Confinement (Gate 1).</b> The <a href="./the-g1-testbed.html">testbed</a> measures whether the
+plasma reaches the required confinement multiplier (H₉₈ ≈ 2.28). Because the breeder's gain depends on it,
+this is measured first — the load-bearing verification that nonlinear gyrokinetics has not yet completed.</li>
+<li><b>Exhaust (Gate 2).</b> Whether the divertor can meet the ≈90% radiated-fraction requirement at the
+design heat flux — currently a requirement quoted outside the fitted data range.</li>
+<li><b>Burner plug physics.</b> Whether end-plug density can approach the ratio the
+<a href="./the-plug-density-requirement.html">closing point requires</a> — the burner's decisive gate.</li>
+</ol>
+<p>Every gate is bound to a <a href="./the-falsifiable-seven.html">falsifiable claim</a>, so the program is
+also a schedule for how Kronos could be proven wrong — deliberately.</p>
+
+<div class="gap"><b>What a gate is not</b>A gate is a measurement, not a guarantee. The program's value is that failure at any gate is informative and public, not hidden.</div>
+<div class="related"><h3>Related</h3><a href="./the-gate-program.html">The gate program &rarr;</a><a href="./the-g1-testbed.html">The G1 confinement testbed &rarr;</a><a href="./the-falsifiable-seven.html">The falsifiable claims &rarr;</a><a href="./the-open-questions-deep-dive.html">The open questions &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
-Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
+(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
 </div></footer>
 </body></html>

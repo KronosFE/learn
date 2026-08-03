@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Deep Dive: The Open Questions · Kronos Fusion Energy</title>
-<meta name="description" content="Kronos publishes a ranked register of what it cannot yet claim — confinement verification, the hot-ion posture, divertor detachment, TAE transport, and runaway mitigation.">
-<link rel="canonical" href="https://kronosfusionenergy.com/learn/the-open-questions-deep-dive.html">
-<meta property="og:title" content="Deep Dive: The Open Questions">
-<meta property="og:description" content="Kronos publishes a ranked register of what it cannot yet claim — confinement verification, the hot-ion posture, divertor detachment, TAE transport, and runaway mitigation.">
-<meta property="og:type" content="article">
-<meta name="robots" content="index,follow">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Open Questions · Kronos Fusion Energy</title>
+<meta name="description" content="Kronos names its hardest unsolved problems: the breeder's confinement requirement, exhaust gate, and triangularity-sign question; the burner's plug-density requirement and helium-3 supply gate."><link rel="canonical" href="https://kronosfusionenergy.com/learn/the-open-questions-deep-dive.html">
+<meta property="og:title" content="The Open Questions"><meta property="og:description" content="Kronos names its hardest unsolved problems: the breeder's confinement requirement, exhaust gate, and triangularity-sign question; the burner's plug-density requirement and helium-3 supply gate."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Deep Dive: The Open Questions", "description": "Kronos publishes a ranked register of what it cannot yet claim — confinement verification, the hot-ion posture, divertor detachment, TAE transport, and runaway mitigation.", "url": "https://kronosfusionenergy.com/learn/the-open-questions-deep-dive.html", "publisher": {"@type": "Organization", "name": "Kronos Fusion Energy"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"The Open Questions","description":"Kronos names its hardest unsolved problems: the breeder's confinement requirement, exhaust gate, and triangularity-sign question; the burner's plug-density requirement and helium-3 supply gate.","url":"https://kronosfusionenergy.com/learn/the-open-questions-deep-dive.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -94,36 +89,44 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
-<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
-<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons &amp; deep-dives</div>
-<div class="kicker">Deep-dive</div>
-<h1>Deep Dive: The Open Questions</h1>
-<p class="lede">Kronos publishes a ranked register of what it cannot yet claim — confinement verification, the hot-ion posture, divertor detachment, TAE transport, and runaway mitigation.</p>
-<dl class="kf"><div class="row"><dt>#1</dt><dd>Confinement H98 = 2.28 (nonlinear CGYRO outstanding)</dd></div><div class="row"><dt>#2</dt><dd>Hot-ion posture (near-thermal baseline)</dd></div><div class="row"><dt>#3</dt><dd>Divertor detachment f_rad ≈ 0.998</dd></div><div class="row"><dt>Also</dt><dd>TAE transport; runaway mitigation</dd></div></dl>
+<div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Comparisons & deep-dives</div>
+<div class="kicker">Deep dive · Honesty</div>
+<h1>The open questions.</h1>
+<p class="lede">A design is only as credible as the problems it admits. Here are the ones Kronos has not solved — stated as requirements and gates, with the evidence class for each.</p>
+<dl class="kf"><div class="row"><dt>Breeder</dt><dd>Confinement H₉₈ ≈ 2.28 · exhaust gate · triangularity sign</dd></div><div class="row"><dt>Burner</dt><dd>Plug-density requirement · direct-conversion efficiency</dd></div><div class="row"><dt>Fuel</dt><dd>Commercial helium-3 supply (lunar, ~2036)</dd></div><div class="row"><dt>Economics</dt><dd>Absolute margins; the capital anchor value</dd></div></dl>
 
-<p>A distinguishing feature of Kronos is that it publishes what it <i>cannot</i> yet claim, ranked and openly. The
-load-bearing open items:</p>
+<p><b>Breeder — HYPERION.</b></p>
 <ul>
-<li><b>Confinement.</b> H98 = 2.28 rests on reduced-order models and the DIII-D database; the nonlinear
-<a href="./gyrokinetic-turbulence.html">gyrokinetic (CGYRO)</a> verification is outstanding — the program's
-biggest bet.</li>
-<li><b>Hot-ion posture.</b> Not sustainable at the ceiling (S61), so the
-<a href="./the-hot-ion-posture-deep-dive.html">near-thermal baseline</a> governs.</li>
-<li><b>Divertor detachment.</b> f_rad ≈ 0.998 is beyond operating precedent, contingent on
-<a href="./super-x-divertor.html">Super-X</a> flux expansion (S74).</li>
-<li><b>Energetic-particle transport.</b> <a href="./alfven-eigenmodes.html">TAE</a> drive at β_fast = 1.59% is a
-named open channel (S67).</li>
-<li><b>Runaway electrons.</b> Mitigation at 43.0 MA is an open engineering item.</li>
+<li><b>Confinement.</b> The design needs a confinement multiplier of about H₉₈ = 2.28 on a profile basis —
+demanding, and not yet confirmed by nonlinear gyrokinetics. This is the breeder's load-bearing open item.</li>
+<li><b>Exhaust.</b> The divertor exhaust gate is a <i>requirement</i> (≈90% radiated fraction), quoted
+from an extrapolation outside the fitted range — a requirement, not a verdict.</li>
+<li><b>Triangularity sign.</b> The deposit carries δ = −0.30, but the sign decision is formally open; the
+−21% current benefit sometimes claimed for negative triangularity is prohibited as out-of-domain.</li>
+<li><b>Availability.</b> Steady-state but damage-life-limited (capacity factor ~0.58–0.83).</li>
 </ul>
-<p>Each is tied to a gate and, via the <a href="./the-falsifiable-seven.html">Falsifiable Seven</a>, to a
-published prediction. Naming these openly is the core of the "show your work" method.</p>
-<div class="related"><h3>Related</h3><a href="./the-falsifiable-seven.html">The Falsifiable Seven &rarr;</a><a href="./the-confinement-case-deep-dive.html">Deep Dive: The Confinement Case &rarr;</a><a href="./what-is-the-biggest-technical-risk.html">What is the biggest technical risk in the Kronos design? &rarr;</a><a href="./the-gate-program.html">The Gate Program (G1–G3) &rarr;</a></div>
+<p><b>Burner — Aegis / MetroVolt.</b></p>
+<ul>
+<li><b>Plug density.</b> The <a href="./the-plug-density-requirement.html">largest open item</a>: the
+closing point needs an end-plug density ~16× the central cell (~347× GDT).</li>
+<li><b>Direct conversion.</b> Real DEC efficiency depends on collector design and the electron power
+channel — named limits, not solved constants.</li>
+<li><b>Helium-3 supply.</b> A commercial fleet is gated on an external (lunar) helium-3 supply that does
+not yet exist.</li>
+</ul>
+<p>None of these require new physics. All are quantified, and all are falsifiable — which is the point of
+publishing them.</p>
+
+<div class="gap"><b>Why lead with the gaps</b>Naming an open problem turns it into a research target; hiding it turns it into a future scandal. Kronos chooses the first.</div>
+<div class="related"><h3>Related</h3><a href="./the-plug-density-requirement.html">The plug-density requirement &rarr;</a><a href="./the-falsifiable-seven.html">The falsifiable claims &rarr;</a><a href="./does-kronos-depend-on-a-breakthrough.html">Does Kronos depend on a breakthrough? &rarr;</a><a href="./what-would-prove-kronos-wrong.html">What would prove Kronos wrong? &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
-Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
+(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
 </div></footer>
 </body></html>

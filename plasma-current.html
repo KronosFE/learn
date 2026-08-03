@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Plasma Current (I_p) · Kronos Fusion Energy</title>
-<meta name="description" content="The plasma current generates the confining poloidal field and sets many limits. Kronos runs a high I_p = 43.0 MA — its least-forgiving parameter.">
-<link rel="canonical" href="https://kronosfusionenergy.com/learn/plasma-current.html">
-<meta property="og:title" content="Plasma Current (I_p)">
-<meta property="og:description" content="The plasma current generates the confining poloidal field and sets many limits. Kronos runs a high I_p = 43.0 MA — its least-forgiving parameter.">
-<meta property="og:type" content="article">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Plasma current confines and heats a tokamak plasma. The Kronos breeder runs 9.86 MA — about two-thirds of ITER's 15 MA — in a compact machine. The tandem-mirror burner has no plasma current at all."><link rel="canonical" href="https://kronosfusionenergy.com/learn/plasma-current.html">
+<meta property="og:title" content="Plasma Current (I_p)"><meta property="og:description" content="Plasma current confines and heats a tokamak plasma. The Kronos breeder runs 9.86 MA — about two-thirds of ITER's 15 MA — in a compact machine. The tandem-mirror burner has no plasma current at all."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Plasma Current (I_p)", "description": "The plasma current generates the confining poloidal field and sets many limits. Kronos runs a high I_p = 43.0 MA — its least-forgiving parameter.", "url": "https://kronosfusionenergy.com/learn/plasma-current.html", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Kronos Fusion Energy Glossary", "url": "https://kronosfusionenergy.com/learn"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Plasma Current (I_p)","description":"Plasma current confines and heats a tokamak plasma. The Kronos breeder runs 9.86 MA — about two-thirds of ITER's 15 MA — in a compact machine. The tandem-mirror burner has no plasma current at all.","url":"https://kronosfusionenergy.com/learn/plasma-current.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -94,28 +89,31 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
-<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
 <div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Concept encyclopedia</div>
-<div class="kicker">Concept</div>
-<h1>Plasma Current (I_p)</h1>
-<p class="lede">The plasma current generates the confining poloidal field and sets many limits. Kronos runs a high I_p = 43.0 MA — its least-forgiving parameter.</p>
-<dl class="kf"><div class="row"><dt>Symbol</dt><dd>I_p</dd></div><div class="row"><dt>Kronos value</dt><dd>43.0 MA (Mode D)</dd></div><div class="row"><dt>Sets</dt><dd>Poloidal field, q95, Greenwald density, disruption energy</dd></div><div class="row"><dt>Robustness</dt><dd>The least forgiving parameter (S79)</dd></div></dl>
+<div class="kicker">Concept · Tokamak physics</div>
+<h1>Plasma current (I_p).</h1>
+<p class="lede">In a tokamak, the plasma itself carries a large electric current that helps confine and heat it. It is central to the breeder — and, tellingly, entirely absent from the burner.</p>
+<dl class="kf"><div class="row"><dt>What it does</dt><dd>Confines and heats a tokamak plasma</dd></div><div class="row"><dt>Breeder current</dt><dd>9.86 MA (≈ ⅔ of ITER's 15 MA)</dd></div><div class="row"><dt>Burner current</dt><dd>None — open field lines, no toroidal current</dd></div><div class="row"><dt>Consequence</dt><dd>The burner cannot disrupt</dd></div></dl>
 
-<p>The <b>plasma current (I_p)</b> is the electric current flowing toroidally through the plasma itself. It
-generates the poloidal magnetic field that, combined with the external toroidal field, produces the twisted field
-lines that confine the plasma. Almost every other limit — the <a href="./safety-factor-q95.html">safety factor</a>,
-the <a href="./greenwald-limit.html">Greenwald density</a>, the <a href="./plasma-disruption.html">disruption</a>
-energy — scales with it.</p>
-<p>Kronos MetroVolt runs a high plasma current of <b>I_p = 43.0 MA</b>. The robustness study (S79) found it to be
-the design's <i>least forgiving</i> parameter: a 5% field reduction can be recovered with a density trim, but a
-10% shortfall in plasma current cannot — which is why the current is held with margin rather than run to the edge.</p>
-<div class="related"><h3>Related</h3><a href="./safety-factor-q95.html">Safety Factor (q₉₅) &rarr;</a><a href="./greenwald-limit.html">The Greenwald Density Limit &rarr;</a><a href="./current-drive.html">Current Drive &amp; Non-Inductive Operation &rarr;</a><a href="./plasma-disruption.html">Plasma Disruption &rarr;</a></div>
+<p>A tokamak drives a large toroidal current through its plasma; that current generates part of the
+confining field and heats the gas. The Kronos <a href="./what-is-hyperion.html">breeder</a> runs
+<b>9.86 MA</b> — about two-thirds of ITER's 15 MA — in a machine a fraction of ITER's size, reaching its
+performance through high field and power density rather than scale.</p>
+<p>The <a href="./what-is-a-tandem-mirror.html">burner</a> is fundamentally different: as an open, linear
+machine it carries <b>no</b> toroidal plasma current. That absence is not a detail — it is why the burner
+<a href="./plasma-disruption.html">cannot disrupt</a>, removing an entire failure mode that tokamaks must
+engineer against.</p>
+
+
+<div class="related"><h3>Related</h3><a href="./plasma-disruption.html">Plasma disruption &rarr;</a><a href="./how-does-kronos-compare-to-iter.html">How does Kronos compare to ITER? &rarr;</a><a href="./safety-factor-q95.html">Safety factor (q₉₅) &rarr;</a><a href="./current-drive.html">Current drive &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
-Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
+(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
 </div></footer>
 </body></html>
