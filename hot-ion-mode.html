@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hot-Ion Mode · Kronos Fusion Energy</title>
-<meta name="description" content="In a hot-ion plasma the ions are hotter than the electrons (T_i/T_e &gt; 1), boosting fusion output. Kronos treats this posture as a bet it must prove, not assume.">
-<link rel="canonical" href="https://kronosfusionenergy.com/learn/hot-ion-mode.html">
-<meta property="og:title" content="Hot-Ion Mode">
-<meta property="og:description" content="In a hot-ion plasma the ions are hotter than the electrons (T_i/T_e &gt; 1), boosting fusion output. Kronos treats this posture as a bet it must prove, not assume.">
-<meta property="og:type" content="article">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Hot-ion mode runs the fuel ions hotter than the electrons, boosting fusion output while limiting radiation losses. Both Kronos machines rely on it — the breeder for gain, the burner at ~90 keV ion temperature."><link rel="canonical" href="https://kronosfusionenergy.com/learn/hot-ion-mode.html">
+<meta property="og:title" content="Hot-Ion Mode"><meta property="og:description" content="Hot-ion mode runs the fuel ions hotter than the electrons, boosting fusion output while limiting radiation losses. Both Kronos machines rely on it — the breeder for gain, the burner at ~90 keV ion temperature."><meta property="og:type" content="article"><meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Hot-Ion Mode", "description": "In a hot-ion plasma the ions are hotter than the electrons (T_i/T_e > 1), boosting fusion output. Kronos treats this posture as a bet it must prove, not assume.", "url": "https://kronosfusionenergy.com/learn/hot-ion-mode.html", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Kronos Fusion Energy Glossary", "url": "https://kronosfusionenergy.com/learn"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","name":"Hot-Ion Mode","description":"Hot-ion mode runs the fuel ions hotter than the electrons, boosting fusion output while limiting radiation losses. Both Kronos machines rely on it — the breeder for gain, the burner at ~90 keV ion temperature.","url":"https://kronosfusionenergy.com/learn/hot-ion-mode.html","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Kronos Fusion Energy Glossary","url":"https://kronosfusionenergy.com/learn"}}</script>
 <style>
 :root{
  --bg:#232C39; --text:#E7EBF2; --mut:#8FA0B8; --gold:#D4AD5C; --gold-soft:#E2C57E;
@@ -94,32 +89,32 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
-<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/metro-volt">MetroVolt</a><a href="https://kronosfusionenergy.com/aegis">AEGIS</a></nav>
+<nav class="top"><a href="https://kronosfusionenergy.com/learn/">Learn</a><a href="https://kronosfusionenergy.com/learn/videos.html">Watch</a><a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">Live&nbsp;Sim</a><a href="https://kronosfusionenergy.com/technology">Technology</a></nav>
 </div></header>
 <main class="wrap">
 <div class="crumb"><a href="https://kronosfusionenergy.com/learn/">Learn</a> &rsaquo; Concept encyclopedia</div>
-<div class="kicker">Concept</div>
-<h1>Hot-Ion Mode</h1>
-<p class="lede">In a hot-ion plasma the ions are hotter than the electrons (T_i/T_e &gt; 1), boosting fusion output. Kronos treats this posture as a bet it must prove, not assume.</p>
-<dl class="kf"><div class="row"><dt>Condition</dt><dd>T_i/T_e ≥ 1.5 (prediction P2)</dd></div><div class="row"><dt>Why it helps</dt><dd>Fusion rate rises with ion temperature; electrons radiate</dd></div><div class="row"><dt>Hot-ion ceiling (gated, labeled history)</dt><dd>P_fus ≈ 2.41 GW, P_net ≈ 0.84 GWe</dd></div><div class="row"><dt>Operating baseline (Mode D)</dt><dd>near-thermal Ti = Te = 48 keV: P_fus 1.22 GW, P_net 486 MWe</dd></div></dl>
+<div class="kicker">Concept · Plasma regime</div>
+<h1>Hot-ion mode.</h1>
+<p class="lede">Fusion happens between ions, but energy leaks mostly through electrons. Running the ions hotter than the electrons — hot-ion mode — buys more fusion for less loss. Both Kronos machines lean on it.</p>
+<dl class="kf"><div class="row"><dt>Hot-ion mode</dt><dd>Ion temperature > electron temperature</dd></div><div class="row"><dt>Benefit</dt><dd>More fusion power, less radiation loss</dd></div><div class="row"><dt>Breeder</dt><dd>Hot-ion operation supports its gain</dd></div><div class="row"><dt>Burner</dt><dd>Ion temperature ≈ 90 keV</dd></div></dl>
 
-<p>Fusion reaction rate rises steeply with <i>ion</i> temperature, while the <i>electron</i> channel is where
-turbulence concentrates and where bremsstrahlung and synchrotron radiation drain energy. A <b>hot-ion mode</b>,
-in which the ions are kept hotter than the electrons (T<sub>i</sub>/T<sub>e</sub> &gt; 1), therefore buys more
-fusion power for less radiated loss. Negative triangularity helps by keeping the electron channel deliberately
-cool.</p>
-<p>Kronos states the hot-ion posture as a <b>ceiling, not a baseline</b>. The hot-ion ceiling reaches
-P<sub>fus</sub> ≈ 2.41 GW at P<sub>net</sub> ≈ 0.84 GWe, but only if fast-ion channeling delivers the required
-credit — it is gated, and its ledgers are labeled history. The <b>operating baseline</b>, ratified 24 July 2026
-as the frozen Mode-D point, is near-thermal (T<sub>i</sub> = T<sub>e</sub> = 48 keV): P<sub>fus</sub> = 1.22 GW
-and P<sub>net</sub> = 486 MWe on the exhaust-honest ledger (~510 MWe channeling-gated). Kronos plans and prices
-to the baseline, and treats the ceiling as upside to be earned.</p>
-<div class="gap"><b>Honest gap</b>Channeling redress of the hot-ion 'tax' is bounded at about 30% even at 100% efficiency (per the extension analyses), so the near-thermal posture is the operating baseline. T_i/T_e ≥ 1.5 is prediction P2, adjudicated at G1.</div>
-<div class="related"><h3>Related</h3><a href="./lawson-criterion.html">The Lawson Criterion &amp; Triple Product &rarr;</a><a href="./bootstrap-fraction.html">Bootstrap Fraction &rarr;</a><a href="./direct-energy-conversion.html">Direct Energy Conversion (DEC) &rarr;</a><a href="./d-he3-vs-d-t.html">D–³He vs D–T Fuel &rarr;</a></div>
+<p>Fusion reactivity depends on how hot the <i>ions</i> are, while the biggest radiation losses
+(bremsstrahlung, synchrotron) scale with the <i>electrons</i>. If you can keep the ions hotter than the
+electrons — <b>hot-ion mode</b> — you get more fusion per unit of radiated power. It is a lever both Kronos
+machines use.</p>
+<p>The <a href="./what-is-a-tandem-mirror.html">burner</a> is an extreme case: it runs at an ion
+temperature near <b>90 keV</b>, far above where D–³He would otherwise be practical, precisely because the
+charged-particle payoff justifies the heat. The <a href="./what-is-hyperion.html">breeder</a> uses a
+milder hot-ion posture to reach its gain. In both, the electron channel is a named loss term in the
+deposited power balance, not an afterthought.</p>
+
+
+<div class="related"><h3>Related</h3><a href="./bremsstrahlung.html">Bremsstrahlung radiation &rarr;</a><a href="./ion-and-electron-temperature.html">Ion & electron temperature &rarr;</a><a href="./the-fuel-cleanliness-trajectory.html">The fuel-cleanliness trajectory &rarr;</a><a href="./what-is-a-tandem-mirror.html">What is a tandem mirror? &rarr;</a></div>
 </main>
 <footer><div class="wrap">
 Kronos Fusion Energy — compact, low-neutron fusion generators, engineered in the open.
-Design numbers are the MetroVolt design point; open data &amp; code: <a href="https://doi.org/10.5281/zenodo.21248916">DOI 10.5281/zenodo.21248916</a> (CC BY 4.0).
-Strategic partnerships: <a href="https://kronosfusionenergy.com/contact">kronosfusionenergy.com/contact</a>.
+Two machines: <b>HYPERION</b> (spherical-tokamak D–T breeder) and the D–³He tandem-mirror burner
+(<b>Aegis</b> / <b>MetroVolt</b>). Open data: breeder <a href="https://doi.org/10.5281/zenodo.21746157">DOI 10.5281/zenodo.21746157</a> ·
+burner <a href="https://doi.org/10.5281/zenodo.21746479">DOI 10.5281/zenodo.21746479</a> (CC BY 4.0). Run it: <a href="https://kronosfusionenergy.com/Physics_Validation_Simulation">live simulation</a>.
 </div></footer>
 </body></html>
