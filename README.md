@@ -16,5 +16,5 @@ YouTube embeds (privacy-nocookie) on matching topic pages.
 - `sitemap_learn.xml` — URL fragment to merge into the main site sitemap
 - `llms_learn.txt` — fragment to append to /llms.txt
 
-Every number is canon (MetroVolt design point; DOI 10.5281/zenodo.21248916).
+Every number is canon (MetroVolt design point; DOI 10.5281/zenodo.21746479).
 Do not hand-edit pages — regenerate from `build_kb.py`.
