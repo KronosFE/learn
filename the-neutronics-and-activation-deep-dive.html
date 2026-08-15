@@ -90,7 +90,7 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 .watchbar .wl{font-family:var(--serif);font-style:italic;color:#C4CEDC;font-size:1.05rem}
 .watchbar a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;white-space:nowrap}
 @media(max-width:560px){.wrap{padding:0 18px}.kf .row{grid-template-columns:1fr;gap:2px}nav.top a:nth-child(n+4){display:none}}
-</style>
+/*KFCLIP*/.clip{margin:30px 0 34px}.clip video{width:100%;height:auto;display:block;border:0;border-radius:0;box-shadow:none;background:transparent;-webkit-mask-image:radial-gradient(140% 132% at 50% 47%,#000 74%,transparent 100%);mask-image:radial-gradient(140% 132% at 50% 47%,#000 74%,transparent 100%)}.clip figcaption{font-family:var(--serif,Georgia,serif);font-style:italic;color:var(--mut,#8FA0B8);font-size:.9rem;margin-top:.55rem;text-align:center;opacity:.85}/*/KFCLIP*/</style>
 </head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="https://kronosfusionenergy.com">KRONOS<span>·</span>FUSION</a>
@@ -101,17 +101,18 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <div class="kicker">Deep-dive</div>
 <h1>Deep Dive: Neutronics &amp; Activation</h1>
 <p class="lede">How a low-neutron design transforms the shielding, material lifetime, and waste picture — with a high-fidelity OpenMC calculation planned to fix the numbers.</p>
-<dl class="kf"><div class="row"><dt>Neutron fraction</dt><dd>7.70–10.20% (operating → banking; retired hot-ion evaluation 5.25–7.05%)</dd></div><div class="row"><dt>Wall damage</dt><dd>≈22 dpa over 30 FPY at 0.74 dpa/FPY (≤ ~36 dpa qualification)</dd></div><div class="row"><dt>Shield</dt><dd>Compact center-stack shield; explicit fluence budget</dd></div><div class="row"><dt>High-fidelity</dt><dd>OpenMC (S63, planned)</dd></div></dl>
+<!--KFCLIP--><figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Kronos motion — Activation."><source src="https://pub-6f4141e515994eaf98b678a16ccbf603.r2.dev/bnu8-activation.mp4" type="video/mp4"></video><figcaption>Kronos motion — Activation.</figcaption></figure><!--/KFCLIP-->
+<dl class="kf"><div class="row"><dt>Neutron fraction</dt><dd>5.44% (frozen design point; ~7.70% operating baseline)</dd></div><div class="row"><dt>Wall damage</dt><dd>≤ ~22 dpa over 30 FPY, bounding (≤ ~36 dpa qualification)</dd></div><div class="row"><dt>Shield</dt><dd>Compact center-stack shield; explicit fluence budget</dd></div><div class="row"><dt>High-fidelity</dt><dd>OpenMC (S63, planned)</dd></div></dl>
 
 <p>Neutronics — how a reactor's neutrons deposit energy, damage materials, and activate structures — sets the
 shield thickness, the component lifetimes, and the waste profile. For Kronos it is unusually gentle, because being
 <a href="./does-d-he3-produce-neutrons.html">low-neutron</a> changes every one of those quantities.</p>
-<p>The neutron fraction runs 7.70–10.20% along the <a href="./fuel-staging.html">fuel schedule</a> (operating
-baseline to ³He-banking leg; the retired hot-ion evaluation carried 5.25–7.05%) — roughly an order of magnitude
-below D–T. That means <a href="./wall-loading.html">wall loading</a> of 0.074–0.089 MW/m², a first wall that
-accumulates only ~22 <a href="./displacements-per-atom.html">dpa</a> over 30 full-power-years (0.74 dpa/FPY,
-within its ~36-dpa qualification, so it lasts the plant life), and far less <a href="./neutron-activation.html">activation</a> and
-waste. It also lets the compact <a href="./the-center-stack.html">center-stack</a>
+<p>The neutron fraction is <b>5.44%</b> at the frozen burner design point (~7.70% at the operating baseline) — more than an order of magnitude
+below D–T's 79.7%. At that fraction the first-wall <a href="./wall-loading.html">neutron loading</a> stays low
+(bounded at ≤ ~0.089 MW/m² by the historical fuel-schedule envelope), the first wall accumulates a bounding
+~22 <a href="./displacements-per-atom.html">dpa</a> over 30 full-power-years — within its ~36-dpa qualification,
+so it lasts the plant life — and <a href="./neutron-activation.html">activation</a> and
+waste are far lower than a D–T machine. It also lets the compact <a href="./the-center-stack.html">center-stack</a>
 <a href="./the-neutron-shield.html">shield</a> fit in the tight inboard space.</p>
 <p>The design carries an explicit neutron-fluence budget for the shielded center stack, and a high-fidelity
 <b>OpenMC</b> neutronics calculation (S63) is planned to fix the true shield performance and lifetimes — currently
