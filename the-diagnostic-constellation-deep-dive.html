@@ -110,19 +110,19 @@ padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--li
 <dl class="kf"><div class="row"><dt>Purpose</dt><dd>Measure plasma state in real time</dd></div><div class="row"><dt>Sensors</dt><dd>Magnetics, interferometry, spectroscopy, FBG strain</dd></div><div class="row"><dt>Rate</dt><dd>Thousands of measurements per second</dd></div><div class="row"><dt>Feeds</dt><dd>The digital twin and control stack</dd></div></dl>
 
 <p>Nothing can be controlled that isn't measured, so a fusion plant carries a whole <b>constellation</b> of
-<a href="./plasma-diagnostics.html">diagnostics</a> — sensors watching the plasma from every angle, thousands of
+<a href="/learn/plasma-diagnostics">diagnostics</a> — sensors watching the plasma from every angle, thousands of
 times a second, without touching it.</p>
 <p>The array spans magnetic sensors (tracking current, position, and instabilities), interferometry (density),
 spectroscopy (temperature and impurities), and structural gauges such as fiber-Bragg strain sensors on the magnet.
 Together they reconstruct the plasma's full state in real time.</p>
 <p>In Kronos MetroVolt these signals are ingested through deterministic hardware, scored against the
-<a href="./the-digital-twin.html">digital twin</a>, and used by the
-<a href="./the-ai-native-plant-deep-dive.html">AI-native control stack</a> to hold the plasma within its safety
+<a href="/learn/the-digital-twin">digital twin</a>, and used by the
+<a href="/learn/the-ai-native-plant-deep-dive">AI-native control stack</a> to hold the plasma within its safety
 envelope — a dropped channel votes to a redundant set in under 100 μs. The design is candid that this sensing-and-
 control system must ultimately be validated on real machine data, first at the
-<a href="./the-g1-testbed.html">G1 testbed</a>.</p>
+<a href="/learn/the-g1-testbed">G1 testbed</a>.</p>
 <div class="gap"><b>Honest gap</b>The control-stack latency budgets are design values that must be demonstrated on production hardware under fault injection, alongside G1.</div>
-<div class="related"><h3>Related</h3><a href="./plasma-diagnostics.html">Plasma Diagnostics &rarr;</a><a href="./the-digital-twin.html">The Digital Twin &rarr;</a><a href="./the-ai-native-plant-deep-dive.html">Deep Dive: The AI-Native Plant &rarr;</a><a href="./how-is-ai-used-in-a-fusion-plant.html">How is AI used in a fusion plant? &rarr;</a></div>
+<div class="related"><h3>Related</h3><a href="/learn/plasma-diagnostics">Plasma Diagnostics &rarr;</a><a href="/learn/the-digital-twin">The Digital Twin &rarr;</a><a href="/learn/the-ai-native-plant-deep-dive">Deep Dive: The AI-Native Plant &rarr;</a><a href="/learn/how-is-ai-used-in-a-fusion-plant">How is AI used in a fusion plant? &rarr;</a></div>
 </main>
 <footer><div class="wrap">&copy; 2026 Kronos Fusion Energy, Inc. &middot; Los Angeles, California &middot; <a href="https://www.kronosfusionenergy.com/">kronosfusionenergy.com</a> &middot; <a href="https://zenodo.org/communities/kronos_fusion_energy">Zenodo community</a> &middot; <a href="/contact">Contact</a></div></footer>
 </body></html>
